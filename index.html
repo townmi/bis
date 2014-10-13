@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="./css/towne.css">
+</head>
+<body class="hx_clear">
+	<!-- head -->
+	<div class="head">
+		<div id="head" class="hx_clear">
+			<h2><a href="/"><img src="" alt=""></a></h2>
+			<div class="head_box">
+				<ul>
+					<li><a href="#" class="active">Home</a></li>
+					<li class="out_li">
+						<a href="#">前端技术</a>
+					</li>
+					<li class="out_li">
+						<a href="#">后端(NODEJS)</a>
+					</li>
+					<li><a href="#">C++</a></li>
+					<li><a href="#">Life</a></li>
+					<li><a href="#">Github</a></li>
+				</ul>
+			</div>
+			<ul class="for_li">
+				<li><a href="#">HTML5</a></li>
+				<li><a href="#">CSS</a></li>
+				<li><a href="#">Javascript</a></li>
+			</ul>
+			<ul class="for_li next">
+				<li><a href="#">NODEJS</a></li>
+				<li><a href="#">MongoDB</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- head -->
+	<!-- content -->
+	<div class="con">
+		<div id="con" class="hx_clear">
+			<div class="left">
+				<div class="le_part">
+					<h2>Kategorie</h2>
+					<ul>
+						<li><a href="#">javascript</a></li>
+						<li><a href="#" class="even">css</a></li>
+						<li><a href="#">html</a></li>
+						<li><a href="#" class="even active">c++</a></li>
+						<li><a href="#">nodejs</a></li>
+						<li><a href="#" class="even">mongodb</a></li>
+						<li><a href="#">picture</a></li>
+						<li><a href="#" class="even">life</a></li>
+						<li><a href="#">sanwen</a></li>
+					</ul>
+				</div>
+				<div class="le_part">
+					<h2>Tagi</h2>
+					<div class="le_tag">
+						<a href="#">hexo</a>
+						<a href="#">cnnode</a>
+						<a href="#">python</a>
+						<a href="#">c++</a>
+					</div>
+				</div>
+			</div>
+			<div class="right">
+				<!-- main 文章集合 -->
+				<div class="main">
+					<!-- 文章一 -->
+					<div class="article">
+						<a href="#" class="readmore">Read More</a>
+						<h2>
+							<strong><a href="#">what's javascript and how can we get start?</a></strong>
+							<p>
+								<span>About:</span><a href="#">javascript</a>|<span>2014-10-12</span>
+							</p>
+						</h2>
+						<div class="art_body">
+							<p>
+								while many technological advances occur in an evolutionary manner, occasionally a revolutionary technological appears on the horizon that creates startling new conditions and profound changes.such is the case with the privately developed moller skycar, which is named after its inventor.with his permission, i would like to discuss the military potential of this vehicle.the ruggedized moller skycar variant the military is evaluating is called the light aerial multipurpose vehicle, or lamv (pronounced "lam-vee").
+							</p>
+						</div>
+					</div>
+					<!-- 文章一 -->
+					<div class="article">
+						<a href="#" class="readmore">Read More</a>
+						<h2>
+							<strong><a href="#">what's javascript and how can we get start?</a></strong>
+							<p>
+								<span>About:</span><a href="#">javascript</a>|<span>2014-10-12</span>
+							</p>
+						</h2>
+						<div class="art_body">
+							<p>
+								while many technological advances occur in an evolutionary manner, occasionally a revolutionary technological appears on the horizon that creates startling new conditions and profound changes.such is the case with the privately developed moller skycar, which is named after its inventor.with his permission, i would like to discuss the military potential of this vehicle.the ruggedized moller skycar variant the military is evaluating is called the light aerial multipurpose vehicle, or lamv (pronounced "lam-vee").
+							</p>
+						</div>
+					</div>
+					<!-- 文章一 -->
+					<div class="article">
+						<a href="#" class="readmore">Read More</a>
+						<h2>
+							<strong><a href="#">what's javascript and how can we get start?</a></strong>
+							<p>
+								<span>About:</span><a href="#">javascript</a>|<span>2014-10-12</span>
+							</p>
+						</h2>
+						<div class="art_body">
+							<p>
+								while many technological advances occur in an evolutionary manner, occasionally a revolutionary technological appears on the horizon that creates startling new conditions and profound changes.such is the case with the privately developed moller skycar, which is named after its inventor.with his permission, i would like to discuss the military potential of this vehicle.the ruggedized moller skycar variant the military is evaluating is called the light aerial multipurpose vehicle, or lamv (pronounced "lam-vee").
+							</p>
+						</div>
+					</div>
+					<p class="art_page">
+						<a href=""><</a>
+						<a href="">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<a href="">4</a>
+						<a href="">5</a>
+						<a href="">6</a>
+						<a href="">></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- content -->
+	<!-- foot -->
+	<div class="foot">
+		<div id="foot"></div>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#head .out_li').each(function(i){
+			var _iTimer = null;
+			$(this).on('mouseover', function(){
+				$('#head .for_li').hide();
+				clearTimeout(_iTimer);
+				showL();
+			});
+			$(this).on('mouseout', function(){
+				_iTimer = setTimeout(hideL,200);
+			});
+			$('#head .for_li').eq(i).on('mouseover', function(){
+				clearTimeout(_iTimer);
+			});
+			$('#head .for_li').eq(i).on('mouseout', function(){
+				_iTimer = setTimeout(hideL,200);
+			})
+			function showL(){
+				$('#head .for_li').eq(i).stop().slideDown();
+			}
+			function hideL(){
+				$('#head .for_li').eq(i).stop().slideUp();
+			}
+		})
+	})
+</script>
+</html>
