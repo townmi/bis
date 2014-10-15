@@ -14,7 +14,7 @@ textarea{margin: 0; padding: 0; resize: none; overflow: auto; outline: none;}
 
 body{
 	background: #0c1840 url(../img/bg.png) center top no-repeat;
-	padding-top: 73px;
+	padding-top: 53px;
 }
 /*head*/
 .head{
@@ -160,25 +160,26 @@ body{
 /*right--->main*/
 #con .article{
 	position: relative;
+	margin-top: 10px;
 }
-#con .article h2{
+#con .art_head h2{
 	height: 58px;
 	background-color: #ebebeb;
 	padding: 0 30px;
 	line-height: 58px;
 }
-#con .article h2 strong a{
+#con .art_head h2 strong a{
 	color: #31355b;
 }
-#con .article h2 p{
+#con .art_head h2 p{
 	float: right;
 	font-weight: normal;
 	color: #b8b8b8;
 }
-#con .article h2 span{
+#con .art_head h2 span{
 	padding-left: 10px;
 }
-#con .article h2 p a{
+#con .art_head h2 p a{
 	color: #22b485;
 	padding: 0 10px;
 }
@@ -197,6 +198,9 @@ body{
 #con .art_body{
 	padding: 30px 33px;
 	background-color: #ffffff;
+	max-height: 90px;
+	border-bottom: 30px solid #ffffff;
+	overflow: hidden;
 }
 #con .art_body p{
 	line-height: 24px;
