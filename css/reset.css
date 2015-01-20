@@ -1,0 +1,81 @@
+body{padding: 0; margin: 0; background-color: #ffffff; font-family:'PingHei';}
+h1,h2,h3,h4{font-weight: normal;}
+a{
+	text-decoration: none;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.ui_global_progress_bg{
+	height: 4px;
+	background-color: #ff4455;
+}
+.ui_global_progress{
+	width: 10%;
+	height: 100%;
+	background-color: #00EF43;
+}
+.ui_global_loading{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 4px;
+	background: rgba(255,255,255,0.7) url(../images/load.gif) center center no-repeat;
+	display: none;
+}
+.ui_head_bg{
+	height: 30px;
+	background: -webkit-linear-gradient(top, #ebe9e8, #dbd9d8);
+}
+.ui_head{
+	width: 960px;
+	height: 100%;
+	padding: 0 20px;
+	margin: 0 auto;
+	background: -webkit-linear-gradient(top, #ebe9e8, #dbd9d8);
+	text-align: right;
+}
+.ui_head a{
+	font: 18px/30px "PingHei";
+	color: #aaaaaa;
+}
+.ui_head a:hover{
+	color: #3d3d3d;
+}
+
+.ui_page{
+	text-align: center;
+}
+.ui_page .ui_prev{
+
+}
+
+
+.ui_foot_bg{
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: -webkit-linear-gradient(top, #414141, #313131);
+	color: #b8b8b8;
+	font: 22px/40px "PingHei";
+}
+.ui_foot{
+	width: 1000px;
+	margin: 0 auto;
+	background: -webkit-linear-gradient(top, #414141, #313131);
+}
+.ui_foot a{
+	color: #b8b8b8;
+}
+.ui_foot a:hover{
+	color: #ffffff;
+}
+.ui_foot .node_js:hover{
+	color: #80bd01;
+}
+.ui_foot .digitalocean:hover{
+	color: #3686be;
+}
