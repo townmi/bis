@@ -1,10 +1,99 @@
-body{padding: 0; margin: 0; background-color: #ffffff;}
+@charset "utf-8";
+/* CSS Document */
+/*
+ * author : towne
+ * version : 0.0.1
+ * date : 2015.1.22
+ *
+*/
+@font-face {
+	font-family:'PingHei';
+	font-style:normal;
+	font-weight: 200;
+	src:local('☺︎'), url("../font/PingHei-light.ttf") format("truetype");
+	/* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
+}
+@font-face {
+	font-family:'LanTing';
+	font-style:normal;
+	font-weight: normal;
+	src:local('☺︎'), url("../font/LanTing.ttf") format("truetype");
+	/* Copyright (c) 2000-2008, Changzhou SinoType Technology Co., Ltd.  All rights reserved. */
+}
+
+
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+li{
+	list-style: none;
+}
+p{
+	word-wrap: break-word;
+}
 a{
 	text-decoration: none;
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
 }
+em{
+	font-style: normal;
+}
+img{
+	border: 0;
+	vertical-align: top;
+}
+input{
+	outline: none;
+}
+*:focus {
+	outline: none;
+} 
+textarea{
+	resize: none;
+	overflow: auto;
+	outline: none;
+}
+body{
+	position: relative;
+	font: 14px "Microsoft Yahei", "Arial Narrow", HELVETICA;
+	background-color: #fdfdfd;
+	background-image: url(../images/apple_background.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 100% 100%;
+	-webkit-text-size-adjust: 100%;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.clear{
+	zoom: 1;
+}
+
+
+#body{
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
 .ui_global_progress_bg{
 	height: 4px;
 	background-color: #ff4455;
@@ -14,18 +103,12 @@ a{
 	height: 100%;
 	background-color: #00EF43;
 }
-.ui_global_loading{
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	top: 4px;
-	background: rgba(255,255,255,0.7) url(../images/load.gif) center center no-repeat;
-	display: none;
-}
 .ui_head_bg{
 	height: 30px;
 	background: -webkit-linear-gradient(top, #ebe9e8, #dbd9d8);
+	background: -moz-linear-gradient(top, #ebe9e8, #dbd9d8);
+	background: -ms-linear-gradient(top, #ebe9e8, #dbd9d8);
+	background: linear-gradient(top, #ebe9e8, #dbd9d8);
 }
 .ui_head{
 	width: 960px;
@@ -33,26 +116,98 @@ a{
 	padding: 0 20px;
 	margin: 0 auto;
 	background: -webkit-linear-gradient(top, #ebe9e8, #dbd9d8);
+	background: -moz-linear-gradient(top, #ebe9e8, #dbd9d8);
+	background: -ms-linear-gradient(top, #ebe9e8, #dbd9d8);
+	background: linear-gradient(top, #ebe9e8, #dbd9d8);
 	text-align: right;
 }
 .ui_head a{
-	font: 18px/30px "PingHei";
+	font: 14px/30px "Microsoft Yahei";
 	color: #aaaaaa;
 }
 .ui_head a:hover{
 	color: #3d3d3d;
 }
 
+
+
+
+
+
+
+
+
+.ui_center{
+	width: 1000px;
+	margin: 0 auto;
+}
+.ui_article{
+	width: 700px;
+	height: 500px;
+	background-color: green;
+}
+.ui_sidebox{
+	width: 300px;
+	height: 1400px;
+	background-color: red;
+}
+.ui_side{
+	width: 300px;
+	height: 200px;
+	position: fixed;
+	top: 50%;
+	background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .ui_page{
 	text-align: center;
 }
 .ui_page .ui_prev{
-
+	
 }
 
 
+
+
+
+
+
+
 .ui_foot_bg{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
 	background: -webkit-linear-gradient(top, #414141, #313131);
+	background: -moz-linear-gradient(top, #414141, #313131);
+	background: -ms-linear-gradient(top, #414141, #313131);
+	background: linear-gradient(top, #414141, #313131);
 	color: #b8b8b8;
 	font: 22px/40px "PingHei";
 }
@@ -60,6 +215,9 @@ a{
 	width: 1000px;
 	margin: 0 auto;
 	background: -webkit-linear-gradient(top, #414141, #313131);
+	background: -moz-linear-gradient(top, #414141, #313131);
+	background: -ms-linear-gradient(top, #414141, #313131);
+	background: linear-gradient(top, #414141, #313131);
 }
 .ui_foot a{
 	color: #b8b8b8;

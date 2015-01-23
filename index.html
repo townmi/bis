@@ -6,76 +6,71 @@
 	<meta name="keywords" content="汤海祥, towne, townmi" />
 	<meta name="description" content="汤海祥的个人网站"/>
 	<title>TOWNE--更新中</title>
-	<link rel="stylesheet" type="text/css" href="./css/font.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-	<!-- <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap-theme.css"> -->
+	<link rel="stylesheet" type="text/css" href="./css/jquery.jscrollpane.css">
 	
 </head>
-<body ng-app="showdownTest">
+<body>
 	<!-- head -->
-	<div class="ui_global_progress_bg">
-		<div class="ui_global_progress"></div>
-	</div>
-	<div class="ui_head_bg">
-		<div class="ui_head">
-			<a href="/" >登陆</a>
+	<div id="body">
+
+		<div class="ui_global_progress_bg">
+			<div class="ui_global_progress"></div>
 		</div>
-	</div>
-
-
-
-	<!-- head over -->
-	<div class="container" data-ng-controller="shTestCtrl">
-		<div class="row">
-			<div class="col-md-6">
-				<h2>Markdown</h2>
-				<textarea id="ed-txt-area" data-ng-model="mdText"></textarea>
-				<p>*for syntax.txt to load, requires a localhost server</p>
-			</div>
-			<div class="col-md-6">
-				<h2>HTML</h2>
-				<div data-sd-model-to-html="mdText"></div>
+		<div class="ui_head_bg">
+			<div class="ui_head">
+				<a href="/" >登陆</a>
 			</div>
 		</div>
-	</div>
+		<!-- head over -->
 
-
-
-	<!-- foot -->
-	<div class="ui_foot_bg">
-		<div class="ui_foot">
-			<span style="color: #80bd01;">Powered by</span>
-			<a href="http://nodejs.org/" target="_blank" class="node_js">NodeJs</a>
-			&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3686be;">Running on</span>
-			<a href="https://www.digitalocean.com/" target="_blank" class="digitalocean">Digitalocean</a>
+		<div class="ui_center clear js_center">
+			<div class="ui_article fl">
+				
+			</div>
+			<div class="ui_sidebox fr">
+				<div class="ui_side">
+					
+				</div>
+			</div>
 		</div>
+
+
+		<!-- foot -->
+		<div class="ui_foot_bg">
+			<div class="ui_foot">
+				<span style="color: #80bd01;">Powered by</span>
+				<a href="http://nodejs.org/" target="_blank" class="node_js">NodeJs</a>
+				&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #3686be;">Running on</span>
+				<a href="https://www.digitalocean.com/" target="_blank" class="digitalocean">Digitalocean</a>
+			</div>
+		</div>
+		<!-- foot over -->
 	</div>
-	<!-- foot over -->
+
 </body>
-<script type="text/javascript" src="./js/src/jquery.js"></script>
-<script type="text/javascript" src="./js/src/showdown.js"></script>
-<script type="text/javascript" src="./js/src/angular.js"></script>
-<script type="text/javascript" src="./js/src/ng-showdown.js"></script>
+<script type="text/javascript" src="./js/seajs/sea.js"></script>
+<script type="text/javascript">
 
-<script>
+	seajs.config({
 
-  var shTest = angular.module('showdownTest', ['Showdown']);
+		// 配置基础路径，内部模块的依赖，不再需要全局去配置路径
+		base: "./js/",
 
-  shTest.controller('shTestCtrl', ['$scope', '$http', function ($scope, $http) {
-    $scope.mdText = '**foo**';
+		// 系统公用模块，直接依赖
+		alias: {
+     		"jquery"		: "src/jquery.js",
+     		"mousewheel"	: "src/mousewheel.js",
+     		"jscrollpane"	: "src/jscrollpane.js"
+    	}
 
-    $http.get('syntax.txt').then(
-            function (data) {
-              $scope.mdText = data.data;
-            },
-            function (error) {
-              console.log(error);
-              alert("couldn't load syntax.txt");
-            }
-    )
-  }]);
+	});
+
+	seajs.use("./js/app", function(app){
+		app();
+	});
+
 </script>
 </html>
