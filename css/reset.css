@@ -129,6 +129,7 @@ body{
 
 .ui_center{
 	width: 1000px;
+	padding: 20px 0;
 	margin: 0 auto;
 	background-color: #ffffff;
 }
@@ -150,10 +151,30 @@ body{
 	background-color: #cc0000;
 }
 
-
-
-
-
+.ui_art_list{
+	padding: 20px;
+}
+.ui_art_list li{
+	width: 100%;
+}
+.ui_art_head{
+	
+}
+.ui_art_title{
+	display: block;
+	padding: 0 3px;
+	line-height: 32px;
+}
+.target{
+	line-height: 24px;
+	padding: 0 10px;
+	background-color: #e4e4e4;
+	border-radius: 3px;
+}
+.target:hover{
+	background-color: #333333;
+	color: #ffffff;
+}
 
 
 
