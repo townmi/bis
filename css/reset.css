@@ -135,7 +135,6 @@ body{
 }
 .ui_article{
 	width: 700px;
-	height: 500px;
 }
 .ui_sidebox{
 	width: 299px;
@@ -144,12 +143,51 @@ body{
 	position: relative;
 }
 .ui_side{
-	width: 300px;
+	width: 280px;
 	height: 200px;
+	padding-left: 20px;
 	position: absolute;
 	top: 0;
-	background-color: #cc0000;
 }
+.ui_categories{
+	padding: 10px 0;
+}
+.ui_categories li{
+	padding: 3px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .ui_art_list{
 	padding: 20px;
@@ -165,19 +203,42 @@ body{
 	padding: 0 3px;
 	font: normal normal 22px/32px "PingHei";
 }
-.target{
+.ui_target{
 	line-height: 24px;
 	padding: 0 10px;
+	display: inline-block;
 	background-color: #e4e4e4;
 	border-radius: 3px;
 }
-.target:hover{
+.ui_target:hover{
 	background-color: #333333;
 	color: #ffffff;
 }
 
 
 
+
+
+
+
+.ui_art_body{
+	padding: 5px;
+	font: normal normal 14px/22px "PingHei";
+}
+.ui_art_body p, .ui_art_body li, .ui_art_body h2{
+	line-height: 22px;
+	margin-top: 12px;
+}
+.ui_art_body p{
+	text-indent: 2em
+}
+
+
+
+
+.ui_art_foot{
+	line-height: 22px;
+}
 
 
 
@@ -240,6 +301,7 @@ body{
 .ui_foot .digitalocean:hover{
 	color: #3686be;
 }
+
 
 /*login*/
 .ui_login{

@@ -13,8 +13,18 @@ define(function (require, exports, module){
 	// var mousewheel = require("mousewheel");
 	// var jscrollpane = require("jscrollpane");
 
+	var Calendar = require("./modules/calendar");
+
 	module.exports = function(){
 
+		var c = new Calendar($(".js_calendar_box"));
+
+		c.draw();
+		
+		c.events();
+
+		console.log(c)
+		
 
 		$("body").css({"height" : $(window).height()});
 
