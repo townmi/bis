@@ -506,14 +506,16 @@ body{
 
 /*tip*/
 .ui_tip{
-	line-height: 24px;
 	padding: 3px 6px;
 	position: absolute;
 	border-radius: 5px;
 	border: 1px solid #0E75C7;
 	background-color: #ffffff;
 }
-
+.ui_tip .ui_content{
+	line-height: 24px;
+	display: inline-block;
+}
 .ui_tip .ui_arrow, .ui_tip .ui_arrow:after{
 	position: absolute;
 	display: block;

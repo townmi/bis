@@ -6,10 +6,7 @@
 	<meta name="keywords" content="汤海祥, towne, townmi" />
 	<meta name="description" content="汤海祥的个人网站"/>
 	<title>TOWNE--更新中</title>
-<!-- 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="./css/reset.css">
-	<link rel="stylesheet" type="text/css" href="./css/jquery.jscrollpane.css">
 	
 </head>
 <body>
@@ -37,11 +34,11 @@
 				</p>
 				<p class="ui_input_line">
 					<label for="password" class="ui_label">口令:</label>
-					<input type="text" id="password" class="ui_base_text ui_text_error">
+					<input type="text" id="password" class="ui_base_text ui_text_error" data-title="这里是一段小tip" data-pos="bottom">
 				</p>
 				<p class="ui_input_line">
 					<label for="captcha" class="ui_label">验证码:</label>
-					<input type="text" id="captcha" class="ui_base_text ui_text_success" style="width:40%;">
+					<input type="text" id="captcha" class="ui_base_text ui_text_success" data-title="这里是一段小tip" data-pos="bottom" style="width:40%;">
 					<img src="" alt="">
 				</p>
 				<p class="ui_input_line" style="margin-top: 30px;">
@@ -92,28 +89,54 @@
 	// 	}
 	// };
 
-	jQuery.fn.tip = function(){
+	jQuery.fn.tip = function(color){
 
+		// 默认参数集合
+		var boder_color = color ? color : "#00589E";
 		var POS_KEY = $(this).attr("data-pos") ? $(this).attr("data-pos") : "right";
+		var key_bool = "", ID = "";
 
+		// 当前DOM元素有无指向ID，查找tipDOM元素
+		if($(this).attr("direct")){
+			key_bool = $(this).attr("direct");
+			tip = $("#"+key_bool);
+		}else{
+			var KEY = new Date().getTime();
+			$(this).attr("direct","ui_tip"+KEY);
+			ID = "ui_tip"+KEY;
+		}
+		// 当前DOM元素的POS
 		var tar_L = $(this).offset().left;
 		var tar_T = $(this).offset().top;
 		var tar_W = $(this).outerWidth();
 		var tar_H = $(this).outerHeight();
+		
+		if(!key_bool){
+			// 如果这个dom元素没有绑定tip的话，生成一个
+			var tip = $("<div>",{
+				"class": "ui_tip",
+				"style": "visibility: hidden;",
+				"id": ID
+			}).appendTo($("body"));
 
-		var title = $(this).attr("data-title");
+			$("<div>",{
+				"class": "ui_arrow "+ POS_KEY
+			}).appendTo(tip);
 
-		var tip = $("<div>",{
-			"class": "ui_tip",
-			"style": "visibility: hidden;"
-		}).appendTo($("body")).html($(this).attr("data-title"));
-		$("<div>",{
-			"class": "ui_arrow "+ POS_KEY
-		}).appendTo(tip)
+			$("<span>",{
+				"class": "ui_content"
+			}).appendTo(tip);
 
+			tip.find(".ui_content").html($(this).attr("data-title"))
+
+		}else{
+			// 已经绑定过tip的直接跳过创建
+			tip.find(".ui_content").html($(this).attr("data-title"));
+
+		}
+		// tip内容变化, pos变化
 		var tip_W = tip.outerWidth();
 		var tip_H = tip.outerHeight();
-
 		var tip_L, tip_T;
 
 		switch(POS_KEY){
@@ -136,14 +159,29 @@
 			default:
 				tip_L = 0;
 				tip_T = 0;
-		}
-		tip.css({"left": tip_L, "top" : tip_T, "visibility" : "visible"});
+		}	
+		// 设置边框的颜色、文字的颜色。手动。
+		tip.css({"border-color" : boder_color}).find(".ui_content").css("color",boder_color);
+		tip.find(".ui_arrow").css("border-"+POS_KEY+"-color", boder_color);
+		// 呈现tip
+		tip.css({"left": tip_L, "top" : tip_T, "visibility" : "visible"}).hide().fadeIn(400);
 
 	};
 </script>
 <script type="text/javascript">
 	$(function(){
-		$("#name").tip();
+		$("#name").blur(function(){
+			var value = $(this).val();
+			$(this).attr("data-pos", "left").attr("data-title", value).tip("#ff5500");
+		});
+		$("#password").blur(function(){
+
+			$(this).attr("data-pos","top").tip("black");
+		});
+		$("#captcha").blur(function(){
+
+			$(this).attr("data-pos","right").tip("green");
+		})
 	})
 </script>
 </html>
