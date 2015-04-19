@@ -1,0 +1,167 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ * author : towne
+ * version : 0.0.1
+ * date : 2015.1.22
+ *
+*/
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,blockquote,legend,input,textarea,select{
+	margin: 0;
+	padding: 0;
+	font-weight: 200;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+li{
+	list-style: none;
+}
+p{
+	word-wrap: break-word;
+	line-height: 32px;
+}
+a{
+	text-decoration: none;
+	color: #333333;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+a:hover{
+	text-decoration: none;
+}
+em{
+	font-style: normal;
+}
+img{
+	border: 0;
+	vertical-align: top;
+}
+input{
+	outline: none;
+	font: inherit;
+}
+*:focus {
+	outline: none;
+} 
+textarea{
+	resize: none;
+	overflow: auto;
+	outline: none;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	position: relative;
+	font: 14px "Microsoft Yahei", "Arial Narrow", HELVETICA;
+	background-color: #ffffff;
+	-webkit-text-size-adjust: 100%;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.clear:after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.clear{
+	zoom: 1;
+}
+
+
+/*头部*/
+.head{
+	height: 40px;
+	background-color: #1B212D;
+}
+
+
+
+.ui_nav{
+	width: 150px;
+	height: 100%;
+	padding-top: 20px;
+	float: left;
+	background-color: #293042;
+}
+.ui_nav_one{
+	line-height: 30px;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #000000;
+	cursor: pointer;
+}
+.ui_nav_one>div{
+	padding-left: 15px;
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+.ui_nav_one>div:hover{
+	background-color: #1b212d;
+}
+.ui_nav_one>div i{
+	width: 16px;
+	color: #ffffff;
+}
+.ui_nav_one>div a{
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #e4e4e4;
+}
+
+.ui_nav ul{
+	position: relative;
+	display: none;
+}
+.ui_nav ul.hide{
+	display: none;
+}
+.ui_nav ul.show{
+	display: block;
+}
+.ui_nav .top{
+	margin-left: -6px;
+	position: absolute;
+	left: 50%;
+	top: -12px;
+	font-size: 24px;
+	color: #1b212d;
+}
+.ui_nav_two{
+	line-height: 30px;
+	background-color: #1b212d;
+	border-bottom: 1px dashed #e4e4e4;
+	cursor: pointer;
+}
+.ui_nav_two:last-child{
+	border: none;
+}
+.ui_nav_two a{
+	padding-left: 25px;
+	color: #e4e4e4;
+}
+.ui_nav_two:hover a{
+	color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
