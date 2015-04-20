@@ -9,8 +9,11 @@
 
 define(function (require, exports, module){
 
-    var $ = jQuery = require("jquery");
+    console.log(require("../src/jquery"))
 
+    var jQuery = require("../src/jquery");
+    var $ = jQuery;
+    console.log($("<div>"));
     function Calendar(parent, currDate, beginDate, endDate, disableDate){
 
         this.box = parent;
