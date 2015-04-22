@@ -1,0 +1,380 @@
+.clearfix:after{clear:both;height:0;overflow:hidden;display:block;visibility:hidden;content:".";}
+.red_bg{background: #c00; color: #fff;}
+.red{color: #c00;}
+/*****首页样式，修改时勿动*******/
+#more a:hover{text-decoration:underline;}
+/*************************/
+/*
+ *首页样式 
+ */
+
+.cx_ind_step{ width: 100%; height: 515px; background-color: #fff;}
+
+
+
+.cx_buy_schedu ul li span,
+.cx_buy_schedu ul li.s_title,
+.cx_ind_service li span,
+.ind_rec_icon
+{background: url(../images/index/cx_icon.png) no-repeat;}
+
+/********************************************开店流程**********************************************/
+.cx_buy_schedu{text-align: center; margin: 0 auto;}
+.cx_buy_schedu ul{position: relative; display: inline-block; margin-top:70px; width:807px;}
+.cx_buy_schedu ul li{color: #c00; display: inline; float: left; margin-left: 95px; z-index: 2; position: relative; line-height: 29px;}
+.cx_buy_schedu ul li span{display: block; width: 60px; height: 60px; margin: 0 auto;}
+
+.cx_buy_schedu ul li.cx_buy_schedu_line{ background: #c00; height: 2px; width: 98%; position: absolute; left: -95px; top: 30px; display: block; z-index: 1;}
+
+.cx_buy_schedu ul li.s_title{ background-position: right top; height: 42px; color: #fff;  font-size: 22px; padding-right:20px; line-height: 42px; overflow: hidden; font-weight: normal; margin:10px 0 0;}
+.cx_buy_schedu ul li.s_title span{background: #c00; padding: 0 10px; display: block; width: auto; height: auto;}
+
+.cx_buy_schedu ul li#s1{margin-left: 35px; width:96px;}
+.cx_buy_schedu ul li#s2,.cx_buy_schedu ul li#s3{ width:68px;}
+.cx_buy_schedu ul li#s4{width:82px;}
+.cx_buy_schedu ul li#s1 span{ background-position: 0 0;}
+.cx_buy_schedu ul li#s2 span{ background-position: 0 -60px;}
+.cx_buy_schedu ul li#s3 span{ background-position: 0 -120px;}
+.cx_buy_schedu ul li#s4 span{ background-position: 0 -180px;}
+
+
+/******************************************星火一站式服务********************************************/
+.cx_ind_service div.title{ margin: 55px 0;}
+.cx_ind_service ul{}
+.cx_ind_service li{float: left; width:160px; margin-left: 105px;font-size: 12px; color: #472e1d; position: relative;}
+.cx_ind_service ul li#s5{margin-left: 45px ; width: 150px;}
+.cx_ind_service li span{ display: block; width: 65px;  margin: 0 auto;}
+.cx_ind_service ul li#s5 span{background-position: -76px 0;height: 57px;}
+.cx_ind_service ul li#s6 span{background-position: -80px -65px; height: 45px;  margin-top: 7px;}
+.cx_ind_service ul li#s7 span{background-position: -80px -115px; height: 61px; margin-top: 3px;}
+.cx_ind_service ul li#s8 span{background-position: -80px -180px; margin-top: 5px; height: 54px;}
+.cx_ind_service ul li p{font-size: 18px; margin: 5px 0 10px; position: absolute; top:70px;}
+.cx_ind_service ul li div{position: absolute; left: 0; top: 105px;}
+
+
+/*******************************************热销产品*********************************************/
+.cx_index_hot{ }
+.cx_index_hot .m1000{ position: relative; }
+.cx_ind_hot_title {margin: 65px 0 25px ;}
+.cx_ind_hot_title a{ position: absolute; right: 0; top: 5px; font-size: 14px; line-height: 45px;}
+.cx_index_hot ul{width: 1100px; position: relative;  margin-bottom: 60px; margin-left: -11px;}
+.cx_index_hot li{width: 332px; height: 342px; background: url(../images/index/cx_hot_bg.png) no-repeat; float: left; margin-right: 13px; position: relative; text-align: center;  color: #2b3e45;}
+.ind_rec_icon{width: 80px; height: 80px; background-position: -158px top; position: absolute; left: 50%; margin-left: -40px; top: -35px;}
+.inx_hot_con{width: 270px; padding-top:50px; margin:0 auto; position: relative;}
+.inx_hot_con h3{border-bottom: 1px solid #e8e9ea; padding-bottom: 30px; line-height: 30px; text-align: center;}
+.inx_hot_con em.over{
+	position: absolute;left:50%;bottom: -30px;width: 121px;height: 121px;z-index: 34;margin-left: -60px;
+	background: url(../images/common/over.png) 0 0 no-repeat;
+}
+.inx_hot_con .main_inp_disabled{width: 100%;}
+.ind_hot_rate{color: #2b3e45;font-size: 18px;border-bottom: 1px solid #e8e9ea; margin-bottom: 10px; white-space: nowrap;}
+.ind_hot_rate span{font-size: 30px;}
+.ind_hot_rate span em{ font-size: 48px;}
+
+.ind_hot_limate{line-height: 35px; font-size: 14px;}
+.ind_hot_limate span{font-size: 18px;}
+
+.cx_btn_buy{display: block; width: 100%; height: 45px; line-height: 45px; font-size: 22px; position: absolute; left: 0; top: 270px;}
+.cx_btn_buy:hover{text-decoration: none; background: #f07575;}
+
+
+/*photoWall*/
+.photoWall{padding-top:70px; padding-bottom:60px;}
+.wall_word{position:absolute; font:36px 'Microsoft Yahei';  left:40px; top:10px;}
+.wall_word label{color:#2b3e45;}
+.wall_word label span{ color:#cc0000;}
+.wall_word label span.wd48{font-size:48px; position:relative; top:-2px;}
+/*indexbottom enter*/
+.index_enter a.btn{display:inline-block; width:400px; background:#cc0000; text-align:center; height:60px; font-size:22px; line-height:60px; color:#fff;}
+.index_enter a.btn:hover{background:#f07575;}
+
+
+/*pay*/
+.pay{
+	width: 958px;
+	padding: 20px;
+	margin: 0 auto;
+	border: 1px solid #e1e1e1;
+	background-color: #ffffff;
+}
+.pay h1{
+	padding-left: 10px;
+	font: 22px/40px "Microsoft Yahei";
+	color: #cc0000;
+}
+.pay table.pay_info{
+	width: 824px;
+	margin: 15px auto;
+	border: 1px solid #eaeaea;
+	border-collapse: collapse;
+	color: #000000;
+}
+.pay table.pay_info th, .pay table.pay_info td{
+	height: 54px;
+	border: 1px solid #eaeaea;
+}
+.pay table.pay_info th{
+	background-color: #fbfbfd;
+}
+.pay table.pay_info td{
+	text-align: center;
+}
+.pay table.pay_info td span{
+	color: #cc0000;
+}
+.pay h2{
+	font: 16px/56px "Microsoft Yahei";
+	color: #cc0000;
+}
+.pay .pay_account{
+	padding: 5px 10px;
+	padding-bottom: 20px;
+	border-top: 1px solid #333;
+}
+.pay_account em{
+	margin: 0 5px;
+	color: #cc0000;
+}
+.pay_account h3{
+	font: 16px/30px "Microsoft Yahei"
+}
+.pay_account h3 em{
+	font: 30px/30px "Arial";
+}
+.pay_account p{
+	padding: 10px 0;
+	height: 33px;
+}
+.pay_account span{
+	line-height: 33px;
+	display: inline-block;
+}
+.pay_account input.txt{
+	padding: 6px 6px 7px 6px;
+	width: 108px;
+	height: 16px;
+	line-height: 16px;
+	margin: 0 5px;
+	*position: relative;
+	*top: 5px;
+}
+.pay_account p strong{
+	margin-left: 5px;
+	font-weight: normal;
+}
+.pay .pay_other{
+	padding: 5px 10px;
+	border-top: 1px solid #333;
+}
+.pay_other ul{
+	padding-left: 30px;
+	padding-top: 22px;
+	width: 100%;
+}
+.pay_other li{
+	float: left;
+	padding: 0 10px;
+	width: 140px;
+	height: 38px;
+	margin-right: 26px;
+	margin-bottom: 26px;
+	border: 1px solid #eaeaea;
+}
+.pay_other li *{
+	float: left;
+}
+.pay_other li.more{
+	border: 1px dashed #B0BABF;
+	line-height: 38px;
+	text-align: center;
+	background-color: #ecf4f8;
+	color: #003367;
+	cursor: pointer;
+}
+.pay_other li input{
+	vertical-align: middle;
+	position: relative;
+	top: 13px;
+	*top: 10px;
+}
+.pay_other li img{
+	width: 102px;
+	height: 38px;
+	vertical-align: middle;
+	margin: 0 10px;
+}
+.pay_other_choose p{
+	*padding-top: 26px;
+}
+.pay_other_choose li.pay_tip{
+	width: 100%;
+	*padding-top: 26px;
+	padding: 0;
+	font: 12px/20px "Microsoft Yahei";
+	border: none;
+	margin: 0;
+}
+.pay_other_choose label em{
+	font-size: 14px;
+	color: #959595;
+}
+
+.pay_cash{
+	border-top: 1px solid #d4d7d9;
+	padding: 10px;
+}
+.pay_cash h3, .pay_credit h3{
+	padding: 5px 0;
+}
+.pay_cash h3 i, .pay_credit h3 i{
+	float: left;
+	width: 11px;
+	height: 11px;
+	position: relative;
+	margin-right: 9px;
+	top: 3px;
+	background: url(../images/bank/pay_i.png) 0 -11px no-repeat;
+	cursor: pointer;
+}
+.pay_cash h3 i.active, .pay_credit h3 i.active{
+	background-position: 0 0;
+}
+.pay_cash h3 span, .pay_credit h3 span{
+	font: 16px/18px "Microsoft Yahei";
+	color: #cc0000;
+	float: left;
+}
+.pay_cash h3 a, .pay_credit h3 a{
+	font: 12px/20px "Microsoft Yahei";
+	color: #2475c7;
+	float: right;
+	padding-left: 20px;
+	background: url(../images/bank/help_.png) 0 2px no-repeat;
+
+}
+.pay_cash h3 a:hover, .pay_credit h3 a:hover{
+	text-decoration: underline;
+}
+.pay_credit{
+	border-bottom: 1px solid #d4d7d9;
+	padding: 10px;
+}
+
+
+.pay_table{
+	width: 784px;
+	border-collapse: collapse;
+}
+
+.pay_table th, .pay_table td{
+	text-align: center;
+	line-height: 35px;
+	height: 35px;
+	color: #000;
+	font-size: 14px;
+}
+.pay_table th{
+	background-color: #fbfbfd;
+	height: 40px;
+	line-height: 40px;
+}
+.pay_table tr.color{
+	background-color: #fbfbfd;
+}
+.pay_cash_box,.pay_credit_box{
+	width: 795px;
+	margin: 20px auto;
+	overflow: hidden;
+	display: none;;
+}
+.pay_credit_box strong{
+	font-weight: normal;
+	line-height: 34px;
+	float: left;
+}
+.pay_credit_box input{
+	width: 90px;
+	height: 16px;
+	line-height: 16px;
+	padding: 7px 8px;
+	margin: 0 8px;
+	float: left;
+}
+.pay_credit_box span{
+	font: 12px/34px "Microsoft Yahei";
+	color: #999999;
+	float: left;
+}
+.pay_credit_box span em{
+	color: #cc0000;
+}
+.pay_credit_box span em.black{
+	color: #000;
+}
+.just_pay{
+	padding: 20px 10px 10px 10px;
+}
+.just_pay p{
+	font: 16px/34px "Microsoft Yahei";
+}
+.just_pay p.tip{
+	font-size: 12px;
+	padding-bottom: 50px;
+}
+.just_pay p input{
+	width: 228px;
+	height: 16px;
+	line-height: 16px;
+	padding: 7px 8px;
+	float: left;
+	margin: 0 8px;
+}
+.just_pay strong{
+	font-weight: normal;
+	float: left;
+}
+.just_pay a{
+	font-size: 12px;
+}
+.just_pay a:hover{
+	text-decoration: underline;
+}
+.just_pay span{
+	float: right;
+	font: 16px/46px "Microsoft Yahei";
+}
+.just_pay span em{
+	font-size: 30px;
+	color: #cc0000;
+}
+.just_pay a.go_to_pay{
+	width: 224px;
+	height: 60px;
+	color: #ffffff;
+	background-color: #cc0000;
+	text-align: center;
+	font: 22px/60px "Microsoft Yahei";
+	float: right;
+	border-radius: 3px;
+}
+.just_pay a.go_to_pay:hover{
+	background-color: #f07575;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

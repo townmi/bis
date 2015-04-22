@@ -1,0 +1,391 @@
+@charset "utf-8";
+/* CSS Document */
+/*
+ * author : towne;
+ * date : 2014-10-24;
+ *
+ */
+/*carousel----*/
+
+.carousel{
+	width: 100%;
+	height: 380px;
+	position: relative;
+}
+.carousel ul, .carousel li, .carousel a{
+	width: 100%;
+	height: 100%;
+}
+.carousel li{
+	position: absolute;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+}
+.carousel li.active{
+	z-index: 2;
+}
+.carousel a{
+ 	display: inline-block;
+ 	width: 100%;
+ 	height: 100%;
+ 	background-position: center center;
+ 	background-repeat: no-repeat;
+}
+.carousel img{
+	display: none;
+}
+.carousel .car_btn{
+	position: absolute;
+	right: 50%;
+	width: 500px;
+	bottom: 33px;
+	text-align: left;
+	z-index: 4;
+}
+.carousel .car_btn span{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	cursor: pointer;
+	margin-right: 12px;
+	float: left;
+	font-size: 0;
+	background-repeat: no-repeat;
+	background-image: url(../images/index/caroulse.png);
+	background-position: 0 0;
+}
+.carousel .car_btn span.active{
+	background-position: 0 -12px;
+}
+.carousel #carousel_fixed{
+	position: absolute;
+	z-index: 3;
+	top: 20px;
+	width: 500px;
+	left: 50%;
+}
+#carousel_dialog{
+	width: 392px;
+	height: 380px;
+	position: absolute;
+	display: block;
+	right: 0;
+	overflow: hidden;
+}
+#carousel_dialog .carousel_dialog_ul{
+	width: 784px;
+	position: absolute;
+	left: 0
+	top : 0;
+}
+
+#carousel_fixed .dialog{
+	position: relative;
+	float: left;
+}
+#carousel_fixed .dialog li{
+	position: static;
+	width: 50%;
+	height: 46px;
+	float: left;
+}
+#carousel_fixed .dialog li.active{
+	position: static;
+	z-index: 3;
+}
+#carousel_fixed .dialog a{
+	display: inline;
+}
+#carousel_fixed .dialog .btn a{
+	display: inline-block;
+}
+#carousel_fixed .dialog .change a, #carousel_fixed .dialog .checkbox a{
+	width: auto;
+}
+#carousel_fixed .dialog_reg .input_box{
+	padding-top: 14px;
+}
+#carousel_fixed .dialog_reg .checkbox{
+	padding: 12px 0;
+}
+#carousel_fixed .dialog_reg .btn{
+	padding: 0;
+	padding-bottom: 10px;
+}
+
+/*index-center*/
+
+#carousel_fixed .carousel_center{
+	background-color: #ffffff;
+}
+.carousel_center h2{
+	height: 56px;
+	font-size: 22px;
+	line-height: 56px;
+	font-weight: normal;
+	text-align: center;
+	color: #ffffff;
+	background-color: #d73d3d;
+}
+.carousel_center h3{
+	line-height: 53px;
+	text-align: center;
+	padding-top: 7px;
+	color: #2b3e45;
+	font-size: 18px;
+	font-weight: normal;
+}
+.carousel_center p{
+	line-height: 28px;
+	text-align: center;
+	color: #2b3e45;
+	font-size: 14px;
+}
+.carousel_center p span{
+	color: #cc0000;
+}
+.carousel_center h4{
+	padding-top: 25px;
+	text-align: center;
+}
+.carousel_center h4 a{
+	width: 160px;
+	padding-top: 30px;
+	display: inline-block;
+	text-align: center;
+	height: auto;
+}
+.carousel_center h4 a.carousel_shop{
+	background: url(../images/reset/9.png) center 0 no-repeat;
+}
+.carousel_center h4 a.carousel_wealth{
+	background: url(../images/reset/10.png) center 0 no-repeat;
+}
+.carousel_center h4 strong{
+	line-height: 24px;
+	font-size: 14px;
+	color: #2b3e45;
+	font-weight: normal;
+}
+.carousel_center h4 span{
+	width: 0px;
+	border-left: 1px solid #ccc;
+	height: 40px;
+	display: inline-block;
+}
+.carousel_center .btn{
+	padding: 21px 0;
+	text-align: center;
+}
+.carousel_center .btn a{
+	width: 316px;
+	height: 45px;
+	font-size: 22px;
+	line-height: 45px;
+	background-color: #cdcdcd;
+	color: #ffffff;
+	border-radius: 4px;
+}
+.carousel_center .btn a:hover{
+	background-color: #a7a7a7;
+}
+
+
+/*日历*/
+
+.calendar_box{
+	width: 230px;
+	font-family: Arial;
+	position: absolute;
+	z-index: 9999;
+}
+/*title*/
+.calendar_title{
+	text-align: center;
+	height: 43px;
+	line-height: 43px;
+	width: 100%;
+	background-color: #cc0000;
+	position: relative;
+	font-size: 14px;
+	color: #ffffff;
+}
+.calendar_title .prev_year, .calendar_title .next_year, .calendar_title .prev_month, .calendar_title .next_month{
+	width: 40px;
+	height: 43px;
+	position: absolute;
+	top: 0
+}
+.calendar_title .prev_month, .calendar_title .next_month{
+ 	width: 35px;
+}
+.calendar_title .prev_year{
+	left: 0;
+	background: url(../images/example_img/l_0.png) 15px 16px no-repeat;
+	border-right: 1px solid #bf0000;
+}
+.calendar_title .prev_month{
+	left: 41px;
+	background: url(../images/example_img/l_0.png) 15px 16px no-repeat;
+	border-left: 1px solid #d52e2e;
+}
+.calendar_title .next_month{
+	right: 41px;
+	background: url(../images/example_img/r_0.png) 15px 16px no-repeat;
+	border-right: 1px solid #d52e2e;
+}
+.calendar_title .next_year{
+	right: 0;
+	background: url(../images/example_img/r_0.png) 15px 16px no-repeat;
+	border-left: 1px solid #bf0000;
+}
+.calendar_title .prev_year:hover, .calendar_title .prev_month:hover{
+	background: url(../images/example_img/l_1.png) 15px 16px no-repeat;
+}
+.calendar_title .next_year:hover, .calendar_title .next_month:hover{
+	background: url(../images/example_img/r_1.png) 15px 16px no-repeat;
+}
+.calendar_body{
+	background-color: #fbf8f1;
+	padding-bottom: 17px;
+}
+.calendar_body .day{
+	padding: 13px 17px 0 17px;
+	text-align: center;
+	font-family: "Microsoft Yahei";
+}
+.calendar_body .day span{
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	float: left;
+}
+.calendar_body .date{
+	padding: 0 17px;
+	text-align: center;
+}
+.calendar_body .date li{
+	float: left;
+	display: inline;
+}
+.calendar_body .date a{
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+	float: left;
+	color: #593442;
+}
+.calendar_body .date a.today{
+	background-color: #cc0000;
+	color: #ffffff;
+}
+.calendar_body .date a:hover{
+	background-color: #cc0000;
+	color: #ffffff;
+}
+.calendar_body .date a.prev_month_date, .calendar_body .date a.next_month_date{
+	color: #cccccc;
+}
+.calendar_body .date a.prev_month_date:hover, .calendar_body .date a.next_month_date:hover{
+	color: #cccccc;
+	background-color: #fbf8f1;
+}
+
+
+/*数据弹出层*/
+.dialog_data{
+	width: 868px;
+	padding:  11px 33px 0 33px;
+	background-color: #ffffff;
+}
+.dialog_data .close{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: -26px;
+	top: -26px;
+	background: url(../images/reset/8.png) 0 0 no-repeat;
+	cursor: pointer;
+}
+.dialog_data h2{
+	line-height: 38px;
+	font-size: 18px;
+	color: #cc0000;
+}
+.dialog_data .sp_list_table{
+	padding: 0;
+}
+.hx_table_sl{
+	width: 100px;
+	height: 28px;
+	position: relative;
+	margin:auto;
+}
+.hx_table_sl .JSselectui{
+	width: 82px;
+	height: 30px;
+	line-height: 30px;
+}
+.hx_table_sl .dropdown{
+	height: 30px;
+	top: 1px;
+	left: -6px;
+	margin: 0;
+	*top: -8px;
+	/**left: -5px;*/
+}
+.hx_table_sl .dropdown div{
+	width: 100px;
+	height: 30px;
+}
+.hx_table_sl .dropdown h4{
+	padding: 2px 12px 2px 4px;
+}
+.hx_table_sl .dropdown ul {
+	left: 0;
+}
+.hx_table_sl .dropdown ul li{
+	padding: 2px 0;
+}
+.hx_table_sl .dropdown span{
+	top: 4px;
+	right: 4px;
+}
+/*个人*/
+.accInx_table .hx_table_sl .dropdown{
+	*top: 0;
+}
+.accInx_table_lay .hx_table_sl span{
+	width: 16px;
+	height: 14px;
+}
+
+
+.accInx_sl_2 .hx_table_sl .JSselectui{
+	width: 72px
+}
+.accInx_sl_2 .hx_table_sl .dropdown div{
+	width: 90px;
+}
+/*add 2015-3-11*/
+.hx_table_sl2{
+	width: 98px;
+}
+.hx_table_sl2 .JSselectui{
+	width: 80px;
+}
+
+.hx_table_sl2 .dropdown div{
+	width: 98px;
+}
+.hx_table_sl3{
+	width: 88px;
+}
+.hx_table_sl3 .JSselectui{
+	width: 70px;
+}
+
+.hx_table_sl3 .dropdown div{
+	width: 88px;
+}
