@@ -11,7 +11,7 @@
 </head>
 <body>
 	<!-- 顶部 -->
-	<div class="ui_head">
+	<div class="ui_head" >
 		<div class="ui_logo"></div>
 		<p class="ui_head_user">
 			欢迎
@@ -19,133 +19,260 @@
 			<a href="javascript:;">登出</a></p>
 	</div>
 
+	<table style="width:100%; vertical-align:top; height:93%;">
+		<tr>
+			<td width="150px;">
+				<!-- 左侧导航 -->
+				<ul class="ui_nav" id="js_nav">
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-user"></i>
+							<a href="javascript:;">用户管理</a>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<ul>
+							<li class="top"><i class="fa fa-sort-asc"></i></li>
+							<li class="ui_nav_two"><a href="#">理财经理管理</a></li>
+							<li class="ui_nav_two"><a href="#">级别管理</a></li>
+							<li class="ui_nav_two"><a href="#">审核管理</a></li>
+						</ul>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-th-list"></i>
+							<a href="#">产品管理</a>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<ul>
+							<li class="top"><i class="fa fa-sort-asc"></i></li>
+							<li class="ui_nav_two"><a href="#">产品推荐</a></li>
+							<li class="ui_nav_two"><a href="#">费率管理</a></li>
+						</ul>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-cart-plus"></i>
+							<a href="javascript:;">交易管理</a>
+						</div>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-flag-checkered"></i>
+							<a href="#">营销管理</a>
+						</div>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-folder"></i>
+							<a href="#">账户管理</a>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<ul>
+							<li class="top"><i class="fa fa-sort-asc"></i></li>
+							<li class="ui_nav_two"><a href="#">平台账户管理</a></li>
+							<li class="ui_nav_two"><a href="#">商户账户管理</a></li>
+							<li class="ui_nav_two"><a href="#">用户账户管理</a></li>
+							<li class="ui_nav_two"><a href="#">第三方管理</a></li>
+							<li class="ui_nav_two"><a href="#">调账管理</a></li>
+							<li class="ui_nav_two"><a href="#">参数设置</a></li>
+						</ul>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-stack-exchange"></i>
+							<a href="#">支付管理</a>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<ul>
+							<li class="top"><i class="fa fa-sort-asc"></i></li>
+							<li class="ui_nav_two"><a href="#">支付平台设置</a></li>
+							<li class="ui_nav_two"><a href="#">支付查询</a></li>
+						</ul>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-building-o"></i>
+							<a href="#">结算管理</a>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<ul>
+							<li class="top"><i class="fa fa-sort-asc"></i></li>
+							<li class="ui_nav_two"><a href="#">结算单明细查询</a></li>
+							<li class="ui_nav_two"><a href="#">结算单汇总查询</a></li>
+						</ul>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-pie-chart"></i>
+							<a href="#">财务管理</a>
+						</div>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-bar-chart"></i>
+							<a href="#">报表管理</a>
+						</div>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-file-archive-o"></i>
+							<a href="#">内容管理</a>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<ul>
+							<li class="top"><i class="fa fa-sort-asc"></i></li>
+							<li class="ui_nav_two"><a href="#">内容管理</a></li>
+							<li class="ui_nav_two"><a href="#">广告管理</a></li>
+						</ul>
+					</li>
+					<li class="ui_nav_one">
+						<div>
+							<i class="fa fa-cog"></i>
+							<a href="#">系统管理</a>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<ul>
+							<li class="top"><i class="fa fa-sort-asc"></i></li>
+							<li class="ui_nav_two"><a href="#">系统管理</a></li>
+							<li class="ui_nav_two"><a href="#">菜单管理</a></li>
+							<li class="ui_nav_two"><a href="#">角色管理</a></li>
+							<li class="ui_nav_two"><a href="#">管理员管理</a></li>
+							<li class="ui_nav_two"><a href="#">后台日志</a></li>
+							<li class="ui_nav_two"><a href="#">站点配置</a></li>
+						</ul>
+					</li>
+				</ul>
+			</td>
+			<td style="vertical-align:top;">
+				<!-- 左侧内容 -->
+				<div class="ui_con">
+					<!-- 基础表单 -->
+					<div class="ui_form">
+						<form action="">
+							<div class="ui_form_one">
+								<label for="username">用户名：</label>
+								<input type="text" id="username" value="ggogog" class="ui_base_text">
+							</div>
+							<div class="ui_form_one">
+								<label for="username">用户名：</label>
+								<input type="text" id="username" value="ggogog" class="ui_base_text">
+							</div>
+							<div class="ui_form_one">
+								<label for="username">用户名：</label>
+								<input type="text" id="username" value="ggogog" class="ui_base_text">
+							</div>
+							<div class="ui_form_one">
+								<label for="username">用户名：</label>
+								<input type="text" id="username" value="ggogog" class="ui_base_text">
+							</div>
+							<div class="ui_form_one">
+								<label for="username">用户名：</label>
+								<input type="text" id="username" value="ggogog" class="ui_base_text">
+							</div>
+							<div class="ui_form_btn">
+								<a href="javascript:;" class="ui_base_btn">查询</a>
+							</div>
+						</form>
+					</div>
 
-
-	<!-- 左侧导航 -->
-	<ul class="ui_nav" id="js_nav">
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-user"></i>
-				<a href="javascript:;">用户管理</a>
-				<i class="fa fa-angle-down"></i>
-			</div>
-			<ul>
-				<li class="top"><i class="fa fa-sort-asc"></i></li>
-				<li class="ui_nav_two"><a href="#">理财经理管理</a></li>
-				<li class="ui_nav_two"><a href="#">级别管理</a></li>
-				<li class="ui_nav_two"><a href="#">审核管理</a></li>
-			</ul>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-th-list"></i>
-				<a href="#">产品管理</a>
-				<i class="fa fa-angle-down"></i>
-			</div>
-			<ul>
-				<li class="top"><i class="fa fa-sort-asc"></i></li>
-				<li class="ui_nav_two"><a href="#">产品推荐</a></li>
-				<li class="ui_nav_two"><a href="#">费率管理</a></li>
-			</ul>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-cart-plus"></i>
-				<a href="javascript:;">交易管理</a>
-			</div>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-flag-checkered"></i>
-				<a href="#">营销管理</a>
-			</div>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-folder"></i>
-				<a href="#">账户管理</a>
-				<i class="fa fa-angle-down"></i>
-			</div>
-			<ul>
-				<li class="top"><i class="fa fa-sort-asc"></i></li>
-				<li class="ui_nav_two"><a href="#">平台账户管理</a></li>
-				<li class="ui_nav_two"><a href="#">商户账户管理</a></li>
-				<li class="ui_nav_two"><a href="#">用户账户管理</a></li>
-				<li class="ui_nav_two"><a href="#">第三方管理</a></li>
-				<li class="ui_nav_two"><a href="#">调账管理</a></li>
-				<li class="ui_nav_two"><a href="#">参数设置</a></li>
-			</ul>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-stack-exchange"></i>
-				<a href="#">支付管理</a>
-				<i class="fa fa-angle-down"></i>
-			</div>
-			<ul>
-				<li class="top"><i class="fa fa-sort-asc"></i></li>
-				<li class="ui_nav_two"><a href="#">支付平台设置</a></li>
-				<li class="ui_nav_two"><a href="#">支付查询</a></li>
-			</ul>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-building-o"></i>
-				<a href="#">结算管理</a>
-				<i class="fa fa-angle-down"></i>
-			</div>
-			<ul>
-				<li class="top"><i class="fa fa-sort-asc"></i></li>
-				<li class="ui_nav_two"><a href="#">结算单明细查询</a></li>
-				<li class="ui_nav_two"><a href="#">结算单汇总查询</a></li>
-			</ul>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-pie-chart"></i>
-				<a href="#">财务管理</a>
-			</div>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-bar-chart"></i>
-				<a href="#">报表管理</a>
-			</div>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-file-archive-o"></i>
-				<a href="#">内容管理</a>
-				<i class="fa fa-angle-down"></i>
-			</div>
-			<ul>
-				<li class="top"><i class="fa fa-sort-asc"></i></li>
-				<li class="ui_nav_two"><a href="#">内容管理</a></li>
-				<li class="ui_nav_two"><a href="#">广告管理</a></li>
-			</ul>
-		</li>
-		<li class="ui_nav_one">
-			<div>
-				<i class="fa fa-cog"></i>
-				<a href="#">系统管理</a>
-				<i class="fa fa-angle-down"></i>
-			</div>
-			<ul>
-				<li class="top"><i class="fa fa-sort-asc"></i></li>
-				<li class="ui_nav_two"><a href="#">系统管理</a></li>
-				<li class="ui_nav_two"><a href="#">菜单管理</a></li>
-				<li class="ui_nav_two"><a href="#">角色管理</a></li>
-				<li class="ui_nav_two"><a href="#">管理员管理</a></li>
-				<li class="ui_nav_two"><a href="#">后台日志</a></li>
-				<li class="ui_nav_two"><a href="#">站点配置</a></li>
-			</ul>
-		</li>
-	</ul>
+					<!-- 基础表格 -->
+					<div class="ui_table">
+						<table>
+							<thead>
+								<tr>
+									<th width="60px;">序号</th>
+									<th>用户名</th>
+									<th>邮件</th>
+									<th>手机号码</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>123</td>
+									<td>1234</td>
+									<td>12345</td>
+									<td>123456</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>123</td>
+									<td>1234</td>
+									<td>12345</td>
+									<td>123456</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>123</td>
+									<td>1234</td>
+									<td>12345</td>
+									<td>123456</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colSpan="5">
+										<div class="ui_pages">
+											1234
+										</div>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+					<div class="ui_table">
+						<table>
+							<thead>
+								<tr>
+									<th width="60px;">序号</th>
+									<th>用户名</th>
+									<th>邮件</th>
+									<th>手机号码</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>123</td>
+									<td>1234</td>
+									<td>12345</td>
+									<td>123456</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>123</td>
+									<td>1234</td>
+									<td>12345</td>
+									<td>123456</td>
+								</tr>
+								<tr>
+									<td>1</td>
+									<td>123</td>
+									<td>1234</td>
+									<td>12345</td>
+									<td>123456</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colSpan="5">
+										<div class="ui_pages">
+											1234
+										</div>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</table>
 	
-	<!-- 左侧内容 -->
-	<div class="ui_con">
-		
-	</div>
+	
+	
 
 </body>
 <!-- cmd -->
