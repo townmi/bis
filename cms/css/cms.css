@@ -79,7 +79,7 @@ body{
 
 /*头部*/
 .ui_head{
-	height: 7%;
+	height: 40px;
 	background-color: #1B212D;
 }
 
@@ -169,15 +169,10 @@ body{
 
 
 .ui_con{
-	float: left;
-	padding: 20px;
+	padding: 10px 10px 0 20px;
 }
-
-.ui_body{
-	padding-left: 150px;
-	padding-top: 20px;
-	padding-right: 10px;
-	overflow: auto;
+.ui_title{
+	line-height: 40px;
 }
 
 /*统一表格*/
@@ -229,6 +224,7 @@ body{
 	padding-bottom: 10px;
 }
 .ui_form_one{
+	float: left;
 	padding: 10px 0;
 	display: inline-block;
 }
@@ -325,21 +321,43 @@ body{
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(8, 103, 13, .6)
 }
 .ui_form_btn{
-	/*text-align: center;*/
+	padding: 10px;
+	text-align: center;
 }
 .ui_base_btn{
-	min-width: 250px;
+	width: 120px;
+	margin: 0 20px;
 	line-height: 30px;
 	display: inline-block;
 	text-align: center;
 	border-radius: 5px;
-	background-color: #ff5500;
+	background-color: #293042;
 	color: #ffffff;
+	font-weight: 100;
+}
+.ui_base_btn:hover{
+	background-color: #414B67;
+}
+.ui_sure_btn{
+	
+}
+.ui_reset_btn{
+	background-color: #00B03E;
+}
+.ui_reset_btn:hover{
+	background-color: #60D78A;
+}
+.ui_base_btn i.fa{
+	margin-right: 10px;
 }
 
 
 
-
+.fa{
+	-webkit-transition: all .9s ease-in-out;
+	-moz-transition: all .9s ease-in-out;
+	transition: all .9s ease-in-out;
+}
 
 
 

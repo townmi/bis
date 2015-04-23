@@ -39,13 +39,19 @@ define(function (require, exports, module){
 			// 绑定事件
 
 			$(e).on("click", function (){
+				self.menus.not(this).attr("status", 0);
+				self.menus.not(this).each(function (i, e){
+					$(e).find(".fa").eq(1).attr("class", "fa fa-angle-down");
+				})
+				self.lower.not($(this).next()).hide();
+
 				if($(this).attr("status") == "1"){
-					self.lower.hide();
-					self.menus.attr("status", 0);
+					$(this).attr("status", 0);
+					$(this).find(".fa")[1].className = "fa fa-angle-down";
+					$(this).next().hide();
 				}else{
-					self.menus.not(this).attr("status", 0);
-					self.lower.not($(this).next()).hide();
 					$(this).attr("status", 1);
+					$(this).find(".fa")[1].className = "fa fa-angle-up";
 					$(this).next().show();
 				}
 				
