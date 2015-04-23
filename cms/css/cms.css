@@ -228,6 +228,13 @@ body{
 	padding: 10px 0;
 	display: inline-block;
 }
+.ui_form_one label{
+	min-width: 100px;
+	display: inline-block;
+	text-align: right;
+}
+
+
 @media screen and (max-width:1074px){
 	.ui_form_one{
 		width: 49.5%;
@@ -286,7 +293,7 @@ body{
 }
 
 .ui_base_text{
-	min-width: 170px;
+	min-width: 160px;
 	height: 28px;
 	padding: 0 10px;
 	line-height: 30px;
@@ -324,6 +331,56 @@ body{
 	padding: 10px;
 	text-align: center;
 }
+
+
+
+
+
+.ui_base_sel{
+	width: 182px;
+	height: 28px;
+	padding: 0 10px;
+	line-height: 30px;
+	font-size: 14px;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+	background-color: #ffffff;
+	background-image: none;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+	transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.ui_base_sel:focus{
+	border-color: #0E75C7;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .ui_base_btn{
 	width: 120px;
 	margin: 0 20px;
@@ -350,6 +407,18 @@ body{
 .ui_base_btn i.fa{
 	margin-right: 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
