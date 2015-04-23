@@ -6,8 +6,10 @@
 	<meta name="keywords" content="汤海祥, towne, townmi" />
 	<meta name="description" content="汤海祥的个人网站"/>
 	<title>CMS</title>
-	<link rel="stylesheet" type="text/css" href="css/cms.css">
+	
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/cms.css">
+	<link rel="stylesheet" type="text/css" href="css/dialog.css">
 </head>
 <body>
 	<!-- 顶部 -->
@@ -192,6 +194,10 @@
 								<a href="javascript:;" class="ui_base_btn ui_sure_btn">确定</a>
 								<a href="javascript:;" class="ui_base_btn ui_reset_btn">重置</a>
 							</div>
+
+							<div class="ui_form_btn">
+								<a href="javascript:;" class="ui_base_btn" id="js_dialog">弹出层</a>
+							</div>
 						</form>
 					</div>
 
@@ -307,6 +313,7 @@
     	}
 	});
 	seajs.use('./js/apps/menu.js');
+	seajs.use('./js/apps/dialog_example.js');
 </script>
 </html>
 
