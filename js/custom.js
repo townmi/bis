@@ -2,6 +2,7 @@
  // Calling the function
 $(function() {
     $('.toggle-nav').click(function() {
+        $(this).toggleClass("active");
         toggleNavigation();
     });
 });

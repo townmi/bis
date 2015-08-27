@@ -13,23 +13,23 @@ body{
 }
 
 h1, h2, h3{
-	text-align: center;
+    text-align: center;
 }
 
 h1{
-	font-family: Arial, sans-serif;
-	font-weight: 700;
-	font-size: 45px;
-	margin-top: 15px;
-	color: #38935f;
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 45px;
+    margin-top: 15px;
+    color: #38935f;
 }
 
 h3{
-	font-family: Arial, sans-serif;
-	font-weight: 400;
-	font-size: 25px;
-	margin-top: 15px;
-	color: #918e84;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 15px;
+    color: #918e84;
 }
 
 
@@ -42,6 +42,8 @@ h3{
     position: relative;
     overflow: hidden;
 }
+
+
 #canvas {
     width: 100%;
     height: 100%;
@@ -55,19 +57,23 @@ h3{
     -moz-transition: .5s ease all;
     -o-transition: .5s ease all;
     transition: .5s ease all;
+
 }
+
 #nav {
-    width: 250px;
+    width: 30%;
     height: 100%;
-    background: #38935f;
-    /*background: #111;*/
+    /*background: #38935f;*/
+    background: #111;
     position: absolute;
-    left: -250px;
+    left: -30%;
     top: 0;
+    
     -webkit-transition: .5s ease all;
     -moz-transition: .5s ease all;
     -o-transition: .5s ease all;
     transition: .5s ease all;
+    
     /* By default, rotate the menu 90deg inwards */
     -webkit-transform: rotateY(-90deg);
     -moz-transform: rotateY(-90deg);
@@ -77,14 +83,16 @@ h3{
 }
 
 #container.display-nav #canvas {
-    -webkit-transform: translateX(250px);
-    -moz-transform: translateX(250px);
-    -ms-transform: translateX(250px);
-    -o-transform: translateX(250px);
-    transform: translateX(250px);
+    -webkit-transform: translateX(30%);
+    -moz-transform: translateX(30%);
+    -ms-transform: translateX(30%);
+    -o-transform: translateX(30%);
+    transform: translateX(30%);
 }
+
 /* transition the menu with perspective on "show-nav" */
 #container.display-nav #nav {
+    
     -webkit-transform-origin: 100% 50%;
     -moz-transform-origin: 100% 50%;
     -ms-transform-origin: 100% 50%;
@@ -94,74 +102,80 @@ h3{
     -moz-transform:perspective(600px) rotateY(0deg);
     -ms-transform:perspective(600px) rotateY(0deg);
     -o-transform:perspective(600px) rotateY(0deg);
-    transform:perspective(600px) rotateY(0deg);
+    transform:perspective(50%) rotateY(0deg);
+
 }
 
 
 /* UTILITIES
 -------------------------------------------------*/
+
 #bars{
     width: 34px;
     height: 34px;
-    /*margin: 50px;*/
+    font-size: 34px;
+    margin-left: 49px;
+    color: #38935f;
     position: relative;
-    cursor: pointer;
-    overflow: hidden;
+    display: block;
+    background-color: #333
 }
-#bars .ui_top, #bars .ui_middle, #bars .ui_bottom{
-    width: 34px;
-    height: 7px;
+#bars:before{
     position: absolute;
     left: 0;
-    background-color: #ffffff;
-    cursor: pointer;
+    width: 100%;
+    height: 3;
+    color: #ffffff;
+    content: " "
 }
-#bars .ui_top{
-    top: 0;
-}
-#bars .ui_middle{
-    top: 50%;
-    margin-top: -4px;
-}
-#bars .ui_bottom{
-    bottom: 0;
-}
-
-
-#bars.active .ui_top{
-    -webkit-transform: rotateY(-38deg);
-    -moz-transform: rotateY(-38deg);
-    -ms-transform: rotateY(-38deg);
-    -o-transform: rotateY(-38deg);
-    transform: rotate(-38deg);
-    transform-origin: 24px 24px;
-}
-#bars.active .ui_middle{
-   /*opacity: 0;*/
-}
-#bars.active .ui_bottom{
-    -webkit-transform: rotateY(38deg);
-    -moz-transform: rotateY(38deg);
-    -ms-transform: rotateY(38deg);
-    -o-transform: rotateY(38deg);
-    transform: rotate(38deg);
-    transform-origin: 24px -17px;
+#bars:after{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3;
+    color: #ffffff;
+    content: " "
 }
 
+#bars:hover{
+    color: #48b978
+}
 
 #title{
-	margin: 0;
-	color: rgba(255,255,255,0.9);
-	text-shadow: 0 0 1px rgba(0,0,0,0.1);
-	font-weight: 300;
-	font-size: 2em;
-	font-family: 'Raleway', Arial;
+    margin: 0;
+    padding: 1em;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 0 1px rgba(0,0,0,0.1);
+    font-weight: 300;
+    font-size: 2em;
+    font-family: 'Raleway', Arial;
 }
 
 
 .border{
     border-top: 1px solid rgba(0,0,0,0.2);
 }
+
+a.back {
+   color: #38935f; 
+   width: 200px;
+   text-decoration: none; 
+   text-align: center; 
+   font-family: 'Raleway'; 
+   font-size: 20px;
+   font-weight: 600;
+   display: block;
+   margin: 50px auto 0 auto;
+   border: 2px solid #38935f;
+   padding: 10px;
+
+}
+
+a.back:hover{
+   color: #48b978;
+   border: 2px solid #48b978;
+}
+
 
 .clear {
     clear: both;
@@ -177,6 +191,7 @@ h3{
 
 #toggle {
     list-style: none;
+    margin-top: 40px;
 }
 #toggle div:hover {
     background: rgba(255,255,255,0.2);
@@ -211,7 +226,7 @@ span.the-btn {
     height: 30px;
     width: 43px;
     margin-top: 10px;
-	margin-right: 8px;
+    margin-right: 8px;
     padding:0;
     color: #fff;
 }
@@ -239,7 +254,7 @@ span.the-btn {
 #toggle a {
     margin: 0 0 0 47px;
     padding: 0;
-    font-family: 'Arial';
+    font-family: 'Lato';
     color: #fff;
     line-height: 41px;
     font-weight: normal;
@@ -253,7 +268,7 @@ span.the-btn {
 }
 
 #toggle ul li a:hover{
-	background: #1f9d55;
+    background: #1f9d55;
 }
 
 #toggle ul li a {
