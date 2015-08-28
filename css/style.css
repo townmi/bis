@@ -1,47 +1,40 @@
-/*
-Tutorial Name: Off Canvas Sliding Navigation
-Author: Samuel Dalusung
-*/
+/**
+ * @author [townmi]
+ * @date [2015-08-01]
+ */
 
+/**
+ * body
+ */
 
-/* GENERAL STYLES
--------------------------------------------------*/
-
-html, 
-body{
-    background: #f3efe0;
+html, body{
+    background: rgb(233, 233, 233);
+    font: 100 14px/24px "Microsoft Yahei";
+}
+.background_blur {
+    background: rgba(0, 0, 0, 0.5);
+}
+/**
+ * linnk
+ */
+.ui_link{
+    text-decoration: none;
+    color: #ffffff;
+}
+.ui_link:hover{
+    text-decoration: underline;
 }
 
-h1, h2, h3{
-	text-align: center;
-}
-
-h1{
-	font-family: Arial, sans-serif;
-	font-weight: 700;
-	font-size: 45px;
-	margin-top: 15px;
-	color: #38935f;
-}
-
-h3{
-	font-family: Arial, sans-serif;
-	font-weight: 400;
-	font-size: 25px;
-	margin-top: 15px;
-	color: #918e84;
-}
-
-
-/* CONTAINERS
--------------------------------------------------*/
-
+/**
+ * container
+ */
 #container {
     width: 100%;
     height: 100vh; 
     position: relative;
     overflow: hidden;
 }
+
 #canvas {
     width: 100%;
     height: 100%;
@@ -57,18 +50,19 @@ h3{
     transition: .5s ease all;
 }
 #nav {
-    width: 250px;
+    width: 300px;
     height: 100%;
     background: #38935f;
-    /*background: #111;*/
     position: absolute;
-    left: -250px;
+    left: -300px;
     top: 0;
+    overflow-y: auto;
+    box-sizing: border-box;
     -webkit-transition: .5s ease all;
     -moz-transition: .5s ease all;
     -o-transition: .5s ease all;
     transition: .5s ease all;
-    /* By default, rotate the menu 90deg inwards */
+
     -webkit-transform: rotateY(-90deg);
     -moz-transform: rotateY(-90deg);
     -ms-transform: rotateY(-90deg);
@@ -76,15 +70,15 @@ h3{
     transform: rotateY(-90deg);
 }
 
-#container.display-nav #canvas {
-    -webkit-transform: translateX(250px);
-    -moz-transform: translateX(250px);
-    -ms-transform: translateX(250px);
-    -o-transform: translateX(250px);
-    transform: translateX(250px);
+#container.display_nav #canvas {
+    -webkit-transform: translateX(300px);
+    -moz-transform: translateX(300px);
+    -ms-transform: translateX(300px);
+    -o-transform: translateX(300px);
+    transform: translateX(300px);
 }
-/* transition the menu with perspective on "show-nav" */
-#container.display-nav #nav {
+
+#container.display_nav #nav {
     -webkit-transform-origin: 100% 50%;
     -moz-transform-origin: 100% 50%;
     -ms-transform-origin: 100% 50%;
@@ -98,165 +92,147 @@ h3{
 }
 
 
-/* UTILITIES
--------------------------------------------------*/
-#bars{
-    width: 34px;
-    height: 34px;
-    /*margin: 50px;*/
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
+/**
+ * nav
+ */
+nav{
+    position: fixed;
+    width: 100%;
+    height: 44px;
+    background-color: #3F51B5;
+    -webkit-box-shadow: 0 3px 5px #888888;
+    box-shadow: 0 3px 5px #888888;
 }
-#bars .ui_top, #bars .ui_middle, #bars .ui_bottom{
-    width: 34px;
-    height: 7px;
+
+nav .ui_title{
+    width: 50%;
     position: absolute;
-    left: 0;
-    background-color: #ffffff;
-    cursor: pointer;
-}
-#bars .ui_top{
-    top: 0;
-}
-#bars .ui_middle{
-    top: 50%;
-    margin-top: -4px;
-}
-#bars .ui_bottom{
-    bottom: 0;
-}
-
-
-#bars.active .ui_top{
-    -webkit-transform: rotateY(-38deg);
-    -moz-transform: rotateY(-38deg);
-    -ms-transform: rotateY(-38deg);
-    -o-transform: rotateY(-38deg);
-    transform: rotate(-38deg);
-    transform-origin: 24px 24px;
-}
-#bars.active .ui_middle{
-   /*opacity: 0;*/
-}
-#bars.active .ui_bottom{
-    -webkit-transform: rotateY(38deg);
-    -moz-transform: rotateY(38deg);
-    -ms-transform: rotateY(38deg);
-    -o-transform: rotateY(38deg);
-    transform: rotate(38deg);
-    transform-origin: 24px -17px;
-}
-
-
-#title{
-	margin: 0;
-	color: rgba(255,255,255,0.9);
-	text-shadow: 0 0 1px rgba(0,0,0,0.1);
-	font-weight: 300;
-	font-size: 2em;
-	font-family: 'Raleway', Arial;
-}
-
-
-.border{
-    border-top: 1px solid rgba(0,0,0,0.2);
-}
-
-.clear {
-    clear: both;
-    display: block;
+    left: 25%;
+    text-align: center;
+    font: 100 20px/44px "Microsoft Yahei";
+    color: #ffffff;
     overflow: hidden;
-    visibility: hidden;
+
 }
-
-
-
-/* TOGGLE NAV
--------------------------------------------------*/
-
-#toggle {
-    list-style: none;
-}
-#toggle div:hover {
-    background: rgba(255,255,255,0.2);
-    -webkit-box-shadow:inset 0 -1px rgba(0,0,0,0);
-    -moz-box-shadow:inset 0 -1px rgba(0,0,0,0);
-    box-shadow:inset 0 -1px rgba(0,0,0,0);
-    color: #fff;
-}
-#toggle div.active {
-    background: #1f9d55;
-}
-#toggle div {
-
+.toggle_nav {
+    position: absolute;
+    left: 30px;
+    top: 3px;
+    height: 38px;
     cursor: pointer;
+}
+#bars {
     display: block;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+    width: 30px;
+    height: 3px;
+    background: #eee;
+    position: relative;
+    top: 50%;
+    margin-top: -2px;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+}
+#bars:before, #bars:after {
+    display: block;
+    width: inherit;
+    height: 3px;
+    position: absolute;
+    background: inherit;
+    left: 0;
+    content: '';
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
 }
 
-span.menu-icons {
-    font-size: 20px;
-    height: 20px;
-    width: 22px;
-    float: left;
-    margin: 11px 0px 10px 37px;
-    color: #fff;
+#bars:before {
+    bottom: 300%;
+}
+
+#bars:after {
+    top: 300%;
+}
+#bars.to_arrow {
+    animation-name: bars;
+    animation-fill-mode: forwards;
+}
+
+#bars.to_arrow:before {
+    animation-name: bars_before;
+    animation-fill-mode: forwards;
+}
+
+#bars.to_arrow:after {
+    animation-name: bars_after;
+    animation-fill-mode: forwards;
+}
+
+#bars.from_arrow {
+    animation-name: bars_from;
+}
+#bars.from_arrow:before {
+    animation-name: bars_before_from;
+}
+
+#bars.from_arrow:after {
+    animation-name: bars_after_fromm;
+}
+
+@keyframes bars {
+    0% {}
+    100% {transform: rotate(180deg);}
+}
+
+@keyframes bars_before {
+    0% {}
+    100% {transform: rotate(45deg); margin: -7% 37%; width: 75%;}
+}
+
+@keyframes bars_after {
+    0% {}
+    100% {transform: rotate(-45deg); margin: -7% 37%; width: 75%;}
+}
+
+@keyframes bars_from {
+    0% {transform: rotate(-180deg);}
+    100% {}
+}
+
+@keyframes bars_before_from {
+    0% {transform: rotate(45deg); margin: -7% 37%; width: 75%;}
+    100% {}
+}
+
+@keyframes bars_after_fromm {
+    0% {transform: rotate(-45deg); margin: -7% 37%; width: 75%; }
+    100% {}
+}
+
+/**
+ * side--nav
+ */
+
+#nav{
+    padding: 20px 0 0 40px;
+}
+#nav h2{
+    font: 100 24px/30px "Microsoft Yahei";
+    color: #ffffff;
+    padding: 0 0 10px 0;
+}
+#nav li{
+}
+#nav li .ui_link{
+    /*display: block;*/
+    padding: 2px;
+}
+#nav li .ui_link:hover{
+    /*color: #333;*/
 }
 
 
-span.the-btn {
-    float: right;
-    font-size: 20px;
-    height: 30px;
-    width: 43px;
-    margin-top: 10px;
-	margin-right: 8px;
-    padding:0;
-    color: #fff;
+/**
+ * content
+ */
+.ui_content{
+    padding-top: 44px;
 }
-
-#toggle ul {
-    list-style: disc;
-    display: none;
-    color: #fff;
-    background: rgba(0,0,0,0.2);
-    -webkit-box-shadow:inset 0 -1px rgba(0,0,0,0);
-    -moz-box-shadow:inset 0 -1px rgba(0,0,0,0);
-    box-shadow:inset 0 -1px rgba(0,0,0,0);
-
-}
-
-#toggle li a {
-    line-height: 41px;
-    color: #fff;
-    list-style: circle;
-    width: 240px;
-    padding: 0;
-     margin: 0 0 0 50px;
-
-}
-#toggle a {
-    margin: 0 0 0 47px;
-    padding: 0;
-    font-family: 'Arial';
-    color: #fff;
-    line-height: 41px;
-    font-weight: normal;
-    font-size: 18px;
-    text-decoration: none;
-
-}
-
-#toggle ul li {
-    margin-left: 109px;   
-}
-
-#toggle ul li a:hover{
-	background: #1f9d55;
-}
-
-#toggle ul li a {
-    margin-left: 0;   
-}
-

@@ -1,8 +1,14 @@
 
  // Calling the function
 $(function() {
-    $('.toggle-nav').click(function() {
-        $(this).toggleClass("active");
+    $('#js_toggle_nav').click(function() {
+        $("body").toggleClass("background_blur");
+        var bars = $("#bars");
+        if(bars.hasClass("to_arrow")){
+            bars.removeClass().addClass("from_arrow");
+        }else{
+            bars.removeClass().addClass("to_arrow");
+        }
         toggleNavigation();
     });
 });
@@ -10,31 +16,15 @@ $(function() {
 
 // The toggleNav function itself
 function toggleNavigation() {
-    if ($('#container').hasClass('display-nav')) {
+    if ($('#container').hasClass('display_nav')) {
         // Close Nav
-        $('#container').removeClass('display-nav');
+        $('#container').removeClass('display_nav');
     } else {
         // Open Nav
-        $('#container').addClass('display-nav');
+        $('#container').addClass('display_nav');
     }
 }
 
 
-// SLiding codes
-$("#toggle > li > div").click(function () {
-    if (false == $(this).next().is(':visible')) {
-        $('#toggle ul').slideUp();
-    }
 
-    var $currIcon=$(this).find("span.the-btn");
 
-    $("span.the-btn").not($currIcon).addClass('fa-plus').removeClass('fa-minus');
-
-    $currIcon.toggleClass('fa-minus fa-plus');
-
-    $(this).next().slideToggle();
-
-    $("#toggle > li > div").removeClass("active");
-    $(this).addClass('active');
-
-});
