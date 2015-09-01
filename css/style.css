@@ -19,7 +19,6 @@ html, body{
  */
 .ui_link{
     text-decoration: none;
-    color: #ffffff;
 }
 .ui_link:hover{
     text-decoration: underline;
@@ -31,6 +30,42 @@ html, body{
     width: 1200px;
     margin: 0 auto;
 }
+
+
+@keyframes bars {
+    0% {}
+    100% {transform: rotate(180deg);}
+}
+
+@keyframes bars_before {
+    0% {}
+    100% {transform: rotate(45deg); margin: -7% 37%; width: 75%;}
+}
+
+@keyframes bars_after {
+    0% {}
+    100% {transform: rotate(-45deg); margin: -7% 37%; width: 75%;}
+}
+
+@keyframes bars_from {
+    0% {transform: rotate(-180deg);}
+    100% {}
+}
+
+@keyframes bars_before_from {
+    0% {transform: rotate(45deg); margin: -7% 37%; width: 75%;}
+    100% {}
+}
+
+@keyframes bars_after_fromm {
+    0% {transform: rotate(-45deg); margin: -7% 37%; width: 75%; }
+    100% {}
+}
+@keyframes to_article{
+    0% {top: 150px;}
+    100% {top: 0;}
+}
+
 
 /**
  * container
@@ -59,7 +94,7 @@ html, body{
 #nav {
     width: 300px;
     height: 100%;
-    background: #38935f;
+    background: #ffffff;
     position: absolute;
     left: -300px;
     top: 0;
@@ -104,6 +139,7 @@ html, body{
  */
 nav{
     position: fixed;
+    z-index: 2;
     width: 100%;
     height: 44px;
     background-color: #3F51B5;
@@ -184,35 +220,7 @@ nav .ui_title{
     animation-name: bars_after_fromm;
 }
 
-@keyframes bars {
-    0% {}
-    100% {transform: rotate(180deg);}
-}
 
-@keyframes bars_before {
-    0% {}
-    100% {transform: rotate(45deg); margin: -7% 37%; width: 75%;}
-}
-
-@keyframes bars_after {
-    0% {}
-    100% {transform: rotate(-45deg); margin: -7% 37%; width: 75%;}
-}
-
-@keyframes bars_from {
-    0% {transform: rotate(-180deg);}
-    100% {}
-}
-
-@keyframes bars_before_from {
-    0% {transform: rotate(45deg); margin: -7% 37%; width: 75%;}
-    100% {}
-}
-
-@keyframes bars_after_fromm {
-    0% {transform: rotate(-45deg); margin: -7% 37%; width: 75%; }
-    100% {}
-}
 
 /**
  * side--nav
@@ -223,13 +231,14 @@ nav .ui_title{
 }
 #nav h2{
     font: 100 24px/30px "Microsoft Yahei";
-    color: #ffffff;
+    color: #333333;
     padding: 0 0 10px 0;
 }
 #nav li{
 }
 #nav li .ui_link{
     /*display: block;*/
+    color: #333333;
     padding: 2px;
 }
 #nav li .ui_link:hover{
@@ -248,11 +257,51 @@ nav .ui_title{
 /**
  * ui_article_list
  */
-.ui_article_list{
+.ui_article{
+    min-height: 650px;
+    position: relative;
+    padding: 50px;
     background-color: #ffffff;
     -webkit-box-shadow: -2px 0 5px #B3B3B3,0 -2px 5px #B3B3B3,0 2px 5px #B3B3B3,2px 0 5px #B3B3B3;
     box-shadow: -2px 0 5px #B3B3B3,0 -2px 5px #B3B3B3,0 2px 5px #B3B3B3,2px 0 5px #B3B3B3;
+    
+    animation-duration: 600ms;
+    animation-timing-function: ease-in-out;
+    animation-name: to_article;
 }
+.ui_article_list{
+    position: relative;
+    height: 24px;
+    padding-bottom: 5px;
+    background-size: 12px 12px;
+    background-image: url(../imgs/dot.png);
+    background-position: 0 8px;
+    background-repeat: repeat-x;
+}
+.ui_article_list h2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #ffffff;
+}
+.ui_article_list a{
+    padding-left: 5px;
+    color: #333333;
+    font: 100 16px/28px "Microsoft Yahei";
+}
+.ui_article_list em{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-left: 8px;
+    background-color: #ffffff;
+    font: 16px/28px "Arial";
+}
+
+
+
+
+
 
 
 
@@ -275,6 +324,7 @@ nav .ui_title{
  * footer
  */
 footer{
+    position: relative;
     width: 100%;
     background: #565a5c;
     color: #bbb;
