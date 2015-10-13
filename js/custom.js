@@ -11,6 +11,15 @@ $(function() {
         }
         toggleNavigation();
     });
+    $(".content").on("scroll", function(){
+        
+        if($("#bars").hasClass("to_arrow")){
+            $("#bars").removeClass().addClass("from_arrow");
+            toggleNavigation();
+        }
+
+    });
+    
 });
 
 
