@@ -41,7 +41,7 @@
                         <li><a href="" class="ui_link">redis</a></li>
                     </ul>
                 </div>
-                <div class="ui_nav_block" style="margin-right: 0;">
+                <div class="ui_nav_block">
                     <h2>文章分类</h2>
                     <ul class="ui_nav_category">
                         <li><a href="" class="ui_link">javascript</a></li>
@@ -63,7 +63,7 @@
                         <li><a href="" class="ui_link">redis</a></li>
                     </ul>
                 </div>
-                <div class="ui_nav_block" style="margin-right: -300px;">
+                <div class="ui_nav_block">
                     <h2>文章分类</h2>
                     <ul class="ui_nav_category">
                         <li><a href="" class="ui_link">javascript</a></li>
@@ -172,18 +172,7 @@
                     </div>
                 </section>
 
-                <footer>
-                    <section class="ui_content">
-                        <div class="author">
-                            <h1>townmi</h1>
-                        </div>
-                        <div class="copyright">
-                            <h2>townmi ©</h2>
-                        </div>
-                    </section>
-                    
-                </footer>
-                
+                <div id="page" class="ui_content page_group"></div>
             </div>
 
             
@@ -204,7 +193,7 @@
         str += "\n"+"```";
         str += "\n var a = 'assa';\n var test = function(){";
         str += "\n     return function(){";
-        str += "\n         var b = true, c = 12, d = {ak: 'name is akse', age: 120, sex: 'boy', dadad: 'asdkdjjjjjjjjjjjjjjjjjjjjjjjjjjj'}";
+        str += "\n         var b = true, c = 12, d = {ak: 'name is akse', age: 120, sex: 'boy', dadad: 'ad'}";
         str += "\n     }";
         str += "\n } ```";
         // console.log(hljs.highlightAuto(marked(str)))
@@ -212,6 +201,130 @@
                 hljs.highlightBlock(block);
             });
 
+    </script>
+    <script type="text/javascript">
+        $(function(){
+            $.fn.page = function () {
+
+                var Page = function (dom, total) {
+                    this.dom = dom
+                    this.total = total;
+                    this.currentPage = 0;
+                    this.onePageLength = 5;
+                    this.btns = 15;
+                    this.size = Math.floor(this.total/this.onePageLength);
+                };
+
+                Page.prototype.http = function() {
+                    this.data = {
+                        "category": null,
+                        "start": this.currentPage*this.onePageLength,
+                        "end": this.currentPage*this.onePageLength+this.onePageLength
+                    }
+                    console.log(this.data);
+                };
+
+                Page.prototype.refreshView = function (currentPage) {
+
+                    this.currentPage = currentPage*1;
+
+                    var btns = $(this.dom).find('.js_page');
+
+                    $(this.dom).find(".js_page").removeClass("active");
+
+                    if(this.currentPage === 0){
+                        $(this.dom).find(".js_page_prev").addClass("disabled");
+                    } else {
+                        $(this.dom).find(".js_page_prev").removeClass("disabled");
+                    }
+
+                    if(this.currentPage === this.size){
+                        $(this.dom).find(".js_page_next").addClass("disabled");
+                    } else {
+                        $(this.dom).find(".js_page_next").removeClass("disabled");
+                    }
+
+                    if(this.size<this.btns){
+                        btns.eq(this.currentPage).addClass("active");
+                        return this.http();
+                    }
+
+                    if(this.currentPage<Math.ceil(this.btns/2)){
+                        for (var i = 0; i < this.btns; i++) {
+                            btns.eq(i).html(i+1);
+                        };
+                        btns.eq(this.currentPage).addClass("active");
+                        return this.http();
+                    }
+
+                    if(this.currentPage>(this.size-Math.floor(this.btns/2))){
+                        for (var i = 0; i < this.btns; i++) {
+                            btns.eq(i).html(this.size+i-this.btns+2);
+                        };
+                        btns.eq(this.btns-(this.size-this.currentPage+1)).addClass("active");
+                        return this.http();
+                    }
+
+                    for (var i = 0; i < this.btns; i++) {
+                        btns.eq(i).html(this.currentPage+i-Math.floor(this.btns/2)+1);
+                    };
+                    btns.eq(Math.ceil(this.btns/2)-1).addClass("active");
+                    this.http();
+                };
+
+                Page.prototype.event = function () {
+
+                    var self = this;
+
+                    $(this.dom).on("click", ".js_page", function () {
+                        if($(this).hasClass("active")) return;
+                        self.refreshView($(this).html()-1);
+                    });
+
+                    $(this.dom).on("click", ".js_page_prev", function () {
+                        if($(this).hasClass("disabled")) return;
+                        self.currentPage--;
+                        self.currentPage = self.currentPage<0 ? 0 : self.currentPage;
+                        self.refreshView(self.currentPage);
+                    });
+
+                    $(this.dom).on("click", ".js_page_next", function () {
+                        if($(this).hasClass("disabled")) return;
+                        self.currentPage++;
+                        self.currentPage = self.currentPage>self.size ? self.size : self.currentPage;
+                        self.refreshView(self.currentPage);
+                    });
+
+                };
+
+                Page.prototype.int = function () {
+
+                    var intSize = this.size>=this.btns ? this.btns : this.size+1;
+
+                    btnsHtml = [
+                        '<a href="javascript:;" class="btn js_page_prev disabled">上一页</a>',
+                        '<a href="javascript:;" class="btn js_page_next">下一页</a>'
+                    ];
+                    for (var i = intSize-1; i >= 0 ; i--) {
+                        var str = i === 0 ? '<a href="javascript:;" class="btn js_page active">'+(this.currentPage+1+i)+'</a>' : '<a href="javascript:;" class="btn js_page">'+(this.currentPage+1+i)+'</a>';
+                        btnsHtml.splice(1, 0, str);
+                    };
+                    btnsHtml = btnsHtml.join("");
+
+                    $(this.dom).html(btnsHtml);
+
+                    this.event();
+
+                };
+
+                var page = new Page(this, 356);
+
+                page.int();
+
+            }
+
+            $("#page").page();
+        })
     </script>
 </body>
 </html>
