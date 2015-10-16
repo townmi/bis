@@ -10,6 +10,10 @@ html, body, ul, h1, h2, h3, h4, h5, h6, ol, p {
   margin: 0;
   padding: 0; }
 
+h1, h2, h3, h4, h5, h6, strong, i, em {
+  font-weight: normal;
+  font-style: normal; }
+
 li {
   padding: 0;
   margin: 0;
@@ -39,6 +43,160 @@ a {
 
 .clear {
   zoom: 1; }
+
+/**
+ * [CODE STYLE]
+ * Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
+ */
+pre, code {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: .6em;
+  font: 14px Courier, "Liberation Mono", Menlo, monospace;
+  background-color: #23241f;
+  -moz-border-radius: 5px;
+  /* Gecko browsers */
+  -webkit-border-radius: 5px;
+  /* Webkit browsers */
+  -ms-border-radius: 5px;
+  /* IE 9 */
+  -o-border-radius: 5px;
+  /* Opera */
+  border-radius: 5px;
+  overflow-x: auto; }
+
+.prettyprint {
+  padding: 1px 4px;
+  color: #ffffff;
+  background-color: #23241f; }
+
+.hljs {
+  display: inline-block;
+  padding: 0.2em;
+  background: #23241f;
+  -webkit-text-size-adjust: none; }
+
+.hljs,
+.hljs-tag,
+.css .hljs-rules,
+.css .hljs-value,
+.css .hljs-function
+.hljs-preprocessor,
+.hljs-pragma {
+  color: #f8f8f2; }
+
+.hljs-strongemphasis,
+.hljs-strong,
+.hljs-emphasis {
+  color: #a8a8a2; }
+
+.hljs-bullet,
+.hljs-blockquote,
+.hljs-horizontal_rule,
+.hljs-number,
+.hljs-regexp,
+.alias .hljs-keyword,
+.hljs-literal,
+.hljs-hexcolor {
+  color: #ae81ff; }
+
+.hljs-tag .hljs-value,
+.hljs-code,
+.hljs-title,
+.css .hljs-class,
+.hljs-class .hljs-title:last-child {
+  color: #a6e22e; }
+
+.hljs-link_url {
+  font-size: 80%; }
+
+.hljs-strong,
+.hljs-strongemphasis {
+  font-weight: bold; }
+
+.hljs-emphasis,
+.hljs-strongemphasis,
+.hljs-class .hljs-title:last-child {
+  font-style: italic; }
+
+.hljs-keyword,
+.hljs-function,
+.hljs-change,
+.hljs-winutils,
+.hljs-flow,
+.nginx .hljs-title,
+.tex .hljs-special,
+.hljs-header,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-symbol .hljs-string,
+.hljs-tag .hljs-title,
+.hljs-value,
+.alias .hljs-keyword:first-child,
+.css .hljs-tag,
+.css .unit,
+.css .hljs-important {
+  color: #f92672; }
+
+.hljs-function .hljs-keyword,
+.hljs-class .hljs-keyword:first-child,
+.hljs-constant,
+.css .hljs-attribute {
+  color: #66d9ef; }
+
+.hljs-variable,
+.hljs-params,
+.hljs-class .hljs-title {
+  color: #f8f8f2; }
+
+.hljs-string,
+.css .hljs-id,
+.hljs-subst,
+.hljs-type,
+.ruby .hljs-class .hljs-parent,
+.hljs-built_in,
+.django .hljs-template_tag,
+.django .hljs-variable,
+.smalltalk .hljs-class,
+.django .hljs-filter .hljs-argument,
+.smalltalk .hljs-localvars,
+.smalltalk .hljs-array,
+.hljs-attr_selector,
+.hljs-pseudo,
+.hljs-addition,
+.hljs-stream,
+.hljs-envvar,
+.apache .hljs-tag,
+.apache .hljs-cbracket,
+.tex .hljs-command,
+.hljs-prompt,
+.hljs-link_label,
+.hljs-link_url {
+  color: #e6db74; }
+
+.hljs-comment,
+.hljs-javadoc,
+.hljs-annotation,
+.hljs-decorator,
+.hljs-template_comment,
+.hljs-pi,
+.hljs-doctype,
+.hljs-deletion,
+.hljs-shebang,
+.apache .hljs-sqbracket,
+.tex .hljs-formula {
+  color: #75715e; }
+
+.coffeescript .javascript,
+.javascript .xml,
+.tex .hljs-formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .hljs-cdata,
+.xml .php,
+.php .xml {
+  opacity: 1; }
 
 /**
  * body
@@ -72,12 +230,169 @@ a {
     top: 150px; }
   100% {
     top: 0; } }
+@-webkit-keyframes close {
+  100% {
+    -webkit-transform: rotate(45deg); } }
+@-moz-keyframes close {
+  100% {
+    -moz-transform: rotate(45deg); } }
+@-ms-keyframes close {
+  100% {
+    -ms-transform: rotate(45deg); } }
+@keyframes close {
+  100% {
+    transform: rotate(45deg); } }
+@-webkit-keyframes close_before {
+  100% {
+    -webkit-transform: rotate(-90deg);
+    margin-bottom: -30%;
+    width: 100%; } }
+@-moz-keyframes close_before {
+  100% {
+    -moz-transform: rotate(-90deg);
+    margin-bottom: -30%;
+    width: 100%; } }
+@-ms-keyframes close_before {
+  100% {
+    -ms-transform: rotate(-90deg);
+    margin-bottom: -30%;
+    width: 100%; } }
+@keyframes close_before {
+  100% {
+    transform: rotate(-90deg);
+    margin-bottom: -30%;
+    width: 100%; } }
+@-webkit-keyframes close_from {
+  0% {
+    -webkit-transform: rotate(-45deg); } }
+@-moz-keyframes close_from {
+  0% {
+    -moz-transform: rotate(-45deg); } }
+@-ms-keyframes close_from {
+  0% {
+    -ms-transform: rotate(-45deg); } }
+@keyframes close_from {
+  0% {
+    transform: rotate(-45deg); } }
+@-webkit-keyframes close_before_from {
+  0% {
+    -webkit-transform: rotate(90deg);
+    margin-bottom: -30%;
+    width: 100%; } }
+@-moz-keyframes close_before_from {
+  0% {
+    -moz-transform: rotate(90deg);
+    margin-bottom: -30%;
+    width: 100%; } }
+@-ms-keyframes close_before_from {
+  0% {
+    -ms-transform: rotate(90deg);
+    margin-bottom: -30%;
+    width: 100%; } }
+@keyframes close_before_from {
+  0% {
+    transform: rotate(90deg);
+    margin-bottom: -30%;
+    width: 100%; } }
+@-moz-keyframes close_after {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+/* Gecko browsers */
+@-webkit-keyframes close_after {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+/* Webkit browsers */
+@-ms-keyframes close_after {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+/* IE 9 */
+@-o-keyframes close_after {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+/* Opera */
+@keyframes close_after {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+@-moz-keyframes close_after_fromm {
+  0% {
+    opacity: 0; }
+  98% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* Gecko browsers */
+@-webkit-keyframes close_after_fromm {
+  0% {
+    opacity: 0; }
+  98% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* Webkit browsers */
+@-ms-keyframes close_after_fromm {
+  0% {
+    opacity: 0; }
+  98% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* IE 9 */
+@-o-keyframes close_after_fromm {
+  0% {
+    opacity: 0; }
+  98% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+/* Opera */
+@keyframes close_after_fromm {
+  0% {
+    opacity: 0; }
+  98% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 html, body {
   background: #e9e9e9;
-  font: 100 14px/24px "Microsoft Yahei"; }
+  font: 100 14px/24px "Microsoft Yahei";
+  font-family: Courier, "Microsoft Yahei"; }
 
 .background_blur #marsk {
-  display: block; }
+  display: block;
+  opacity: 0.7; }
+
+#marsk {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  display: none;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  -moz-transition: opacity, 0.6s, ease-in-out;
+  /* Gecko browsers */
+  -webkit-transition: opacity, 0.6s, ease-in-out;
+  /* Webkit browsers */
+  -ms-transition: opacity, 0.6s, ease-in-out;
+  /* IE 9 */
+  -o-transition: opacity, 0.6s, ease-in-out;
+  /* Opera */
+  transition: opacity, 0.6s, ease-in-out; }
+
+#marsk.active {
+  opacity: 0.7; }
 
 /**
  * linnk
@@ -108,15 +423,6 @@ nav {
   position: fixed;
   z-index: 2;
   background-color: #3F51B5; }
-
-nav .ui_title {
-  width: 50%;
-  position: absolute;
-  left: 25%;
-  text-align: center;
-  font: 100 20px/44px "Microsoft Yahei";
-  color: #ffffff;
-  overflow: hidden; }
 
 #bars {
   width: 30px;
@@ -178,6 +484,9 @@ nav .ui_title {
 #bars:after {
   top: 300%; }
 
+/**
+ * [arrow]
+ */
 #bars.to_arrow {
   -moz-animation-name: bars;
   /* Gecko browsers */
@@ -271,6 +580,102 @@ nav .ui_title {
   /* Opera */
   animation-name: bars_after_fromm; }
 
+/**
+ * [close]
+ */
+#bars.to_close {
+  -moz-animation-name: close;
+  /* Gecko browsers */
+  -webkit-animation-name: close;
+  /* Webkit browsers */
+  -ms-animation-name: close;
+  /* IE 9 */
+  -o-animation-name: close;
+  /* Opera */
+  animation-name: close;
+  -moz-animation-fill-mode: forwards;
+  /* Gecko browsers */
+  -webkit-animation-fill-mode: forwards;
+  /* Webkit browsers */
+  -ms-animation-fill-mode: forwards;
+  /* IE 9 */
+  -o-animation-fill-mode: forwards;
+  /* Opera */
+  animation-fill-mode: forwards; }
+
+#bars.to_close:before {
+  -moz-animation-name: close_before;
+  /* Gecko browsers */
+  -webkit-animation-name: close_before;
+  /* Webkit browsers */
+  -ms-animation-name: close_before;
+  /* IE 9 */
+  -o-animation-name: close_before;
+  /* Opera */
+  animation-name: close_before;
+  -moz-animation-fill-mode: forwards;
+  /* Gecko browsers */
+  -webkit-animation-fill-mode: forwards;
+  /* Webkit browsers */
+  -ms-animation-fill-mode: forwards;
+  /* IE 9 */
+  -o-animation-fill-mode: forwards;
+  /* Opera */
+  animation-fill-mode: forwards; }
+
+#bars.to_close:after {
+  -moz-animation-name: close_after;
+  /* Gecko browsers */
+  -webkit-animation-name: close_after;
+  /* Webkit browsers */
+  -ms-animation-name: close_after;
+  /* IE 9 */
+  -o-animation-name: close_after;
+  /* Opera */
+  animation-name: close_after;
+  -moz-animation-fill-mode: forwards;
+  /* Gecko browsers */
+  -webkit-animation-fill-mode: forwards;
+  /* Webkit browsers */
+  -ms-animation-fill-mode: forwards;
+  /* IE 9 */
+  -o-animation-fill-mode: forwards;
+  /* Opera */
+  animation-fill-mode: forwards; }
+
+#bars.from_close {
+  -moz-animation-name: close_from;
+  /* Gecko browsers */
+  -webkit-animation-name: close_from;
+  /* Webkit browsers */
+  -ms-animation-name: close_from;
+  /* IE 9 */
+  -o-animation-name: close_from;
+  /* Opera */
+  animation-name: close_from; }
+
+#bars.from_close:before {
+  -moz-animation-name: close_before_from;
+  /* Gecko browsers */
+  -webkit-animation-name: close_before_from;
+  /* Webkit browsers */
+  -ms-animation-name: close_before_from;
+  /* IE 9 */
+  -o-animation-name: close_before_from;
+  /* Opera */
+  animation-name: close_before_from; }
+
+#bars.from_close:after {
+  -moz-animation-name: close_after_fromm;
+  /* Gecko browsers */
+  -webkit-animation-name: close_after_fromm;
+  /* Webkit browsers */
+  -ms-animation-name: close_after_fromm;
+  /* IE 9 */
+  -o-animation-name: close_after_fromm;
+  /* Opera */
+  animation-name: close_after_fromm; }
+
 /** 
  * [鏂囩珷鎺掔増]
  */
@@ -331,6 +736,9 @@ footer .copyright {
   padding: 20px;
   color: #ffffff; }
 
+/**
+ * [鎸夐挳缁刔
+ */
 .page_group {
   padding-top: 30px; }
   .page_group .btn {
@@ -517,6 +925,51 @@ footer .copyright {
   /**
    * container
    */
+  nav .ui_title {
+    width: 1200px;
+    height: 100%;
+    position: absolute;
+    right: 50%;
+    margin-right: -600px;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    /* Gecko browsers */
+    -webkit-box-sizing: border-box;
+    /* Webkit browsers */
+    -ms-box-sizing: border-box;
+    /* IE 9 */
+    -o-box-sizing: border-box;
+    /* Opera */
+    box-sizing: border-box; }
+    nav .ui_title span {
+      line-height: 44px;
+      color: #ffffff; }
+    nav .ui_title a {
+      line-height: 44px;
+      font-size: 26px;
+      font-weight: 100;
+      color: #ffffff; }
+    nav .ui_title a.btn_outside {
+      position: absolute;
+      right: 50px;
+      top: 0; }
+
+  .search_group {
+    width: 900px;
+    display: none;
+    padding-right: 50px;
+    position: absolute;
+    top: 0;
+    right: 12px; }
+    .search_group .ui_search_input {
+      width: 80%;
+      height: 43px;
+      border: none;
+      border-bottom: 1px solid #eeeeee;
+      color: #ffffff;
+      vertical-align: top;
+      background-color: #3F51B5; }
+
   #nav {
     width: 100%;
     height: 300px;
@@ -562,6 +1015,7 @@ footer .copyright {
     position: absolute;
     left: 50%;
     top: 3px;
+    z-index: 3;
     margin-left: 570px;
     cursor: pointer; }
 
@@ -588,7 +1042,8 @@ footer .copyright {
     margin-right: -300px; }
 
   .ui_nav_category {
-    height: 230px; }
+    height: 230px;
+    overflow-y: auto; }
     .ui_nav_category li {
       width: 150px;
       float: left; }
@@ -597,13 +1052,15 @@ footer .copyright {
       color: #f5f5f5; }
 
   .ui_share {
-    width: 200px;
+    width: 220px;
     position: absolute;
     top: 0;
     left: 50%;
     padding-top: 40px;
     margin-left: 400px;
     color: #ffffff; }
+    .ui_share p {
+      font-size: 16px; }
 
   .ui_share_link {
     color: #ffffff;
@@ -787,6 +1244,35 @@ footer .copyright {
     width: 94%;
     margin: 0 auto; }
 
+  nav .ui_title {
+    width: 100%;
+    height: 100%;
+    padding-right: 12px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    overflow: hidden;
+    -moz-box-sizing: border-box;
+    /* Gecko browsers */
+    -webkit-box-sizing: border-box;
+    /* Webkit browsers */
+    -ms-box-sizing: border-box;
+    /* IE 9 */
+    -o-box-sizing: border-box;
+    /* Opera */
+    box-sizing: border-box; }
+    nav .ui_title a {
+      font-size: 26px;
+      color: #ffffff;
+      line-height: 44px; }
+    nav .ui_title span {
+      display: none; }
+
+  .search_group {
+    display: none;
+    position: absolute;
+    right: 12px; }
+
   #marsk {
     width: 100%;
     height: 100%;
@@ -795,7 +1281,17 @@ footer .copyright {
     top: 0;
     z-index: 1;
     display: none;
-    background-color: rgba(0, 0, 0, 0.5); }
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    -moz-transition: all, ease-in-out, 0.6s;
+    /* Gecko browsers */
+    -webkit-transition: all, ease-in-out, 0.6s;
+    /* Webkit browsers */
+    -ms-transition: all, ease-in-out, 0.6s;
+    /* IE 9 */
+    -o-transition: all, ease-in-out, 0.6s;
+    /* Opera */
+    transition: all, ease-in-out, 0.6s; }
 
   #canvas {
     -moz-transform: translateX(0);
@@ -889,6 +1385,7 @@ footer .copyright {
     position: absolute;
     left: 20px;
     top: 3px;
+    z-index: 3;
     cursor: pointer; }
 
   /**
@@ -915,10 +1412,14 @@ footer .copyright {
 
   .ui_share {
     color: #ffffff; }
+    .ui_share p {
+      padding-bottom: 15px;
+      font-size: 16px; }
 
   .ui_share_link {
     color: #ffffff;
-    font-size: 24px; }
+    font-size: 22px;
+    margin-right: 5px; }
 
   /**
    * content
@@ -980,159 +1481,35 @@ footer .copyright {
     /* IE 9 */
     -o-animation-name: to_article;
     /* Opera */
-    animation-name: to_article; } }
-/**
- * [CODE STYLE]
- * Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-license.org/
- */
-pre, code {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding: .6em;
-  font: 14px Courier, "Liberation Mono", Menlo, Courier, monospace;
-  background-color: #23241f;
-  -moz-border-radius: 5px;
-  /* Gecko browsers */
-  -webkit-border-radius: 5px;
-  /* Webkit browsers */
-  -ms-border-radius: 5px;
-  /* IE 9 */
-  -o-border-radius: 5px;
-  /* Opera */
-  border-radius: 5px;
-  overflow-x: auto; }
+    animation-name: to_article; }
 
-.prettyprint {
-  padding: 1px 4px;
-  color: #ffffff;
-  background-color: #23241f; }
+  .page_group {
+    position: relative; }
+    .page_group .btn {
+      position: absolute;
+      display: none; }
+    .page_group .btn:nth-child(1) {
+      display: inline-block;
+      left: 0; }
+    .page_group .btn:nth-last-child(1) {
+      display: inline-block;
+      right: 0; }
 
-.hljs {
-  display: inline-block;
-  padding: 0.2em;
-  background: #23241f;
-  -webkit-text-size-adjust: none; }
+  .ui_article_title h3 {
+    font-size: 18px; }
+    .ui_article_title h3 a {
+      white-space: pre-line;
+      word-break: break-all;
+      letter-spacing: 0px; }
 
-.hljs,
-.hljs-tag,
-.css .hljs-rules,
-.css .hljs-value,
-.css .hljs-function
-.hljs-preprocessor,
-.hljs-pragma {
-  color: #f8f8f2; }
-
-.hljs-strongemphasis,
-.hljs-strong,
-.hljs-emphasis {
-  color: #a8a8a2; }
-
-.hljs-bullet,
-.hljs-blockquote,
-.hljs-horizontal_rule,
-.hljs-number,
-.hljs-regexp,
-.alias .hljs-keyword,
-.hljs-literal,
-.hljs-hexcolor {
-  color: #ae81ff; }
-
-.hljs-tag .hljs-value,
-.hljs-code,
-.hljs-title,
-.css .hljs-class,
-.hljs-class .hljs-title:last-child {
-  color: #a6e22e; }
-
-.hljs-link_url {
-  font-size: 80%; }
-
-.hljs-strong,
-.hljs-strongemphasis {
-  font-weight: bold; }
-
-.hljs-emphasis,
-.hljs-strongemphasis,
-.hljs-class .hljs-title:last-child {
-  font-style: italic; }
-
-.hljs-keyword,
-.hljs-function,
-.hljs-change,
-.hljs-winutils,
-.hljs-flow,
-.nginx .hljs-title,
-.tex .hljs-special,
-.hljs-header,
-.hljs-attribute,
-.hljs-symbol,
-.hljs-symbol .hljs-string,
-.hljs-tag .hljs-title,
-.hljs-value,
-.alias .hljs-keyword:first-child,
-.css .hljs-tag,
-.css .unit,
-.css .hljs-important {
-  color: #f92672; }
-
-.hljs-function .hljs-keyword,
-.hljs-class .hljs-keyword:first-child,
-.hljs-constant,
-.css .hljs-attribute {
-  color: #66d9ef; }
-
-.hljs-variable,
-.hljs-params,
-.hljs-class .hljs-title {
-  color: #f8f8f2; }
-
-.hljs-string,
-.css .hljs-id,
-.hljs-subst,
-.hljs-type,
-.ruby .hljs-class .hljs-parent,
-.hljs-built_in,
-.django .hljs-template_tag,
-.django .hljs-variable,
-.smalltalk .hljs-class,
-.django .hljs-filter .hljs-argument,
-.smalltalk .hljs-localvars,
-.smalltalk .hljs-array,
-.hljs-attr_selector,
-.hljs-pseudo,
-.hljs-addition,
-.hljs-stream,
-.hljs-envvar,
-.apache .hljs-tag,
-.apache .hljs-cbracket,
-.tex .hljs-command,
-.hljs-prompt,
-.hljs-link_label,
-.hljs-link_url {
-  color: #e6db74; }
-
-.hljs-comment,
-.hljs-javadoc,
-.hljs-annotation,
-.hljs-decorator,
-.hljs-template_comment,
-.hljs-pi,
-.hljs-doctype,
-.hljs-deletion,
-.hljs-shebang,
-.apache .hljs-sqbracket,
-.tex .hljs-formula {
-  color: #75715e; }
-
-.coffeescript .javascript,
-.javascript .xml,
-.tex .hljs-formula,
-.xml .javascript,
-.xml .vbscript,
-.xml .css,
-.xml .hljs-cdata,
-.xml .php,
-.php .xml {
-  opacity: 1; }
+  .ui_article_body h1 {
+    font-size: 18px; }
+  .ui_article_body h2 {
+    padding: 2px 0;
+    font-size: 16px; }
+  .ui_article_body h3 {
+    font-size: 14px; }
+  .ui_article_body h4, .ui_article_body h5, .ui_article_body h6, .ui_article_body p {
+    font-size: 12px; } }
 
 /*# sourceMappingURL=common.css.map */

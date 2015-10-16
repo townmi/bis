@@ -30,20 +30,7 @@
                         <li><a href="" class="ui_link">redis</a></li>
                         <li><a href="" class="ui_link">javascript</a></li>
                         <li><a href="" class="ui_link">nodejs</a></li>
-                        <li><a href="" class="ui_link">redis</a></li><li><a href="" class="ui_link">javascript</a></li>
-                        <li><a href="" class="ui_link">nodejs</a></li>
                         <li><a href="" class="ui_link">redis</a></li>
-                        <li><a href="" class="ui_link">javascript</a></li>
-                        <li><a href="" class="ui_link">nodejs</a></li>
-                        <li><a href="" class="ui_link">redis</a></li>
-                        <li><a href="" class="ui_link">javascript</a></li>
-                        <li><a href="" class="ui_link">nodejs</a></li>
-                        <li><a href="" class="ui_link">redis</a></li>
-                    </ul>
-                </div>
-                <div class="ui_nav_block">
-                    <h2>文章分类</h2>
-                    <ul class="ui_nav_category">
                         <li><a href="" class="ui_link">javascript</a></li>
                         <li><a href="" class="ui_link">nodejs</a></li>
                         <li><a href="" class="ui_link">redis</a></li>
@@ -52,7 +39,9 @@
                         <li><a href="" class="ui_link">redis</a></li>
                         <li><a href="" class="ui_link">javascript</a></li>
                         <li><a href="" class="ui_link">nodejs</a></li>
-                        <li><a href="" class="ui_link">redis</a></li><li><a href="" class="ui_link">javascript</a></li>
+                        <li><a href="" class="ui_link">redis</a></li>
+                        <li><a href="" class="ui_link">redis</a></li>
+                        <li><a href="" class="ui_link">javascript</a></li>
                         <li><a href="" class="ui_link">nodejs</a></li>
                         <li><a href="" class="ui_link">redis</a></li>
                         <li><a href="" class="ui_link">javascript</a></li>
@@ -74,7 +63,31 @@
                         <li><a href="" class="ui_link">redis</a></li>
                         <li><a href="" class="ui_link">javascript</a></li>
                         <li><a href="" class="ui_link">nodejs</a></li>
-                        <li><a href="" class="ui_link">redis</a></li><li><a href="" class="ui_link">javascript</a></li>
+                        <li><a href="" class="ui_link">redis</a></li>
+                        <li><a href="" class="ui_link">javascript</a></li>
+                        <li><a href="" class="ui_link">nodejs</a></li>
+                        <li><a href="" class="ui_link">redis</a></li>
+                        <li><a href="" class="ui_link">javascript</a></li>
+                        <li><a href="" class="ui_link">nodejs</a></li>
+                        <li><a href="" class="ui_link">redis</a></li>
+                        <li><a href="" class="ui_link">javascript</a></li>
+                        <li><a href="" class="ui_link">nodejs</a></li>
+                        <li><a href="" class="ui_link">redis</a></li>
+                    </ul>
+                </div>
+                <div class="ui_nav_block">
+                    <h2>文章分类</h2>
+                    <ul class="ui_nav_category">
+                        <li><a href="" class="ui_link">javascript</a></li>
+                        <li><a href="" class="ui_link">nodejs</a></li>
+                        <li><a href="" class="ui_link">redis</a></li>
+                        <li><a href="" class="ui_link">javascript</a></li>
+                        <li><a href="" class="ui_link">nodejs</a></li>
+                        <li><a href="" class="ui_link">redis</a></li>
+                        <li><a href="" class="ui_link">javascript</a></li>
+                        <li><a href="" class="ui_link">nodejs</a></li>
+                        <li><a href="" class="ui_link">redis</a></li>
+                        <li><a href="" class="ui_link">javascript</a></li>
                         <li><a href="" class="ui_link">nodejs</a></li>
                         <li><a href="" class="ui_link">redis</a></li>
                         <li><a href="" class="ui_link">javascript</a></li>
@@ -87,10 +100,10 @@
                 </div>
             	
                 <h1 class="ui_share">
-                    <img src="http://fd.topit.me/d/d6/73/11049699480a673d6dl.jpg" alt="" width="200px">
-                    <a href="" class="ui_share_link"><i class="fa fa-github-square"></i></a>&nbsp;&nbsp;
-                    <a href="" class="ui_share_link"><i class="fa fa-facebook-square"></i></a>&nbsp;&nbsp;
-                    <a href="" class="ui_share_link"><i class="fa fa-twitter-square"></i></a>&nbsp;&nbsp;
+                    <img src="http://fd.topit.me/d/d6/73/11049699480a673d6dl.jpg" alt="" width="170px">
+                    <a href="" class="ui_share_link"><i class="fa fa-github-square"></i></a>
+                    <a href="" class="ui_share_link"><i class="fa fa-facebook-square"></i></a>
+                    <a href="" class="ui_share_link"><i class="fa fa-twitter-square"></i></a>
                     <a href="" class="ui_share_link"><i class="fa fa-weibo"></i></a>
                     <p>powered by Townmi</p>
                 </h1>
@@ -100,7 +113,15 @@
                 <div class="toggle_nav" id="js_toggle_nav">
                     <div id="bars"></div>
                 </div>
-                <h1 class="ui_title">首页</h1>
+                <h1 class="ui_title">
+                    <span>Towne/Townmi</span>
+                    <div class="search_group">
+                        <a href="javascript:;" class="btn_inside" id="js_search_sure"><i class="fa fa-search"></i></a>
+                        <input type="text" id="js_search_key_word" class="ui_search_input">
+                        <a href="javascript:;" class="btn_inside_close ui_close" id="js_search_close"></a>
+                    </div>
+                    <a href="javascript:;" class="btn_outside" id="js_search"><i class="fa fa-search"></i></a>
+                </h1>
             </nav>
             <div class="content">
                 <!-- <section class="ui_content">
@@ -324,6 +345,26 @@
             }
 
             $("#page").page();
+        })
+    </script>
+
+    <script type="text/javascript">
+        $(function(){
+            $("#js_search").on("touchstart click", function () {
+                $(this).hide();
+                $(".search_group").show();
+                $("#marsk").show(0, function () {
+                    $(this).addClass("active");
+                });
+
+                $("#bars").removeClass().addClass("to_close").attr("action", "search");
+            });
+
+            $("#js_search_close").on("touchstart click", function () {
+                
+
+            })
+
         })
     </script>
 </body>

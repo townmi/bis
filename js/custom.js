@@ -4,12 +4,20 @@ $(function() {
     $('#js_toggle_nav').click(function() {
         $("body").toggleClass("background_blur");
         var bars = $("#bars");
+
+        if(bars.attr("action") == "search"){
+            $(".search_group").hide();
+            $("#js_search").show();
+            $("#marsk").removeClass("active").hide();
+            return bars.removeClass().addClass("from_close").attr("action", "");
+        }
         if(bars.hasClass("to_arrow")){
             bars.removeClass().addClass("from_arrow");
         }else{
             bars.removeClass().addClass("to_arrow");
         }
         toggleNavigation();
+
     });
     $(".content").on("scroll", function(){
         
