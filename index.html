@@ -114,13 +114,11 @@
                     <div id="bars"></div>
                 </div>
                 <h1 class="ui_title">
-                    <span>Towne/Townmi</span>
+                    <a href="/" class="ui_index_target"><span>Towne/Townmi</span></a>
                     <div class="search_group">
-                        <a href="javascript:;" class="btn_inside" id="js_search_sure"><i class="fa fa-search"></i></a>
-                        <input type="text" id="js_search_key_word" class="ui_search_input">
-                        <a href="javascript:;" class="btn_inside_close ui_close" id="js_search_close"></a>
+                        <a href="javascript:;" class="ui_search_btn" id="js_search"><i class="fa fa-search"></i></a>&nbsp;
+                        <input type="text" id="js_search_key_word" class="ui_search_input" placeholder="Please enter key word...">
                     </div>
-                    <a href="javascript:;" class="btn_outside" id="js_search"><i class="fa fa-search"></i></a>
                 </h1>
             </nav>
             <div class="content">
@@ -351,19 +349,24 @@
     <script type="text/javascript">
         $(function(){
             $("#js_search").on("touchstart click", function () {
-                $(this).hide();
-                $(".search_group").show();
+                // $(this).hide();
+                // $(".search_group").show(0, function () {
+                //     $(this).addClass("active");
+                // })
                 $("#marsk").show(0, function () {
-                    $(this).addClass("active");
+                    $("#marsk").addClass("active");
                 });
+                
+                $("#js_search_key_word").addClass("active").focus();
+                
 
                 $("#bars").removeClass().addClass("to_close").attr("action", "search");
             });
 
             $("#js_search_close").on("touchstart click", function () {
                 
-
-            })
+                // $(this).removeClass().addClass("disabled");
+            });
 
         })
     </script>

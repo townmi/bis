@@ -133,9 +133,28 @@
         }
     }
     .search_group {
-        display: none;
+        padding-left: 45px;
+        padding-right: 55px;
         position: absolute;
-        right: 12px;
+        top: 0;
+        right: 0;
+        .ui_search_btn {
+            position: absolute;
+            right: 12px;
+        }
+        .ui_search_input {
+            width: 0;
+            height: 44px;
+            border: none;
+            font: 100 20px/44px "Microsoft Yahei";
+            color: #ffffff;
+            vertical-align: top;
+            background-color: #3F51B5;
+            @include transition(all, .5s ease-in-out);
+        }
+        .ui_search_input.active {
+            width: 90%;
+        }
     }
 
     #marsk{

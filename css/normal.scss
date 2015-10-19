@@ -111,30 +111,25 @@
             font-weight: 100;
             color: #ffffff;
         }
-        a.btn_inside {
-
-        }
-        a.btn_outside {
-            position: absolute;
-            right: 50px;
-            top: 0;
-        }
     }
     .search_group {
-        width: 900px;
-        display: none;
-        padding-right: 50px;
+        padding-right: 45px;
         position: absolute;
         top: 0;
-        right: 12px;
+        right: 0;
         .ui_search_input {
-            width: 80%;
-            height: 43px;
+            width: 0;
+            height: 42px;
             border: none;
-            border-bottom: 1px solid #eeeeee;
+            font: 100 20px/42px "Microsoft Yahei";
+            border-bottom: 2px solid #eeeeee;
             color: #ffffff;
             vertical-align: top;
             background-color: #3F51B5;
+            @include transition(all, .5s ease-in-out);
+        }
+        .ui_search_input.active {
+            width: 910px;
         }
     }
 
