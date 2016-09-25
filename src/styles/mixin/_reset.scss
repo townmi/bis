@@ -1,0 +1,134 @@
+@charset "utf-8";
+/*!vipabc | Author by Mike Li*/
+/*!v2 | 2016-3-3*/
+/*!License: vipabc.com*/
+
+/*Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+body{
+    font-family: $baseFontFamily;
+    font-size: 14px;
+}
+em {
+    font-style: normal;
+}
+
+a,img{
+    border: none;
+    text-decoration: none;
+}
+:focus{
+    outline: 0;
+}
+label{
+    cursor: pointer;
+}
+img{
+    vertical-align: middle;
+}
+table{
+    empty-cells: show;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+h1,h2,h3,h4,h5,h6,strong {
+    font-weight: normal;
+}
+h1{
+    font-size: 1.6em;
+}
+h2,h3,h4{
+    font-size: 1.4em;
+}
+h5,h6{
+    font-size: 1.2em;
+}
+input{
+    border: none;
+}
+textarea{
+    overflow: scroll;
+}
+
+a, input,textarea, .hover-delay, button{
+    font-family:$baseFontFamily;
+    @include transition(all 0.3s ease-out);
+}
+
+::-ms-clear {
+    display: none;
+}
+::-ms-reveal {
+    display: none;
+}
+.#{$baseName}-txt-indent {
+    text-indent: -9999999px;
+    overflow: hidden;
+}
+
+
+
+input[type=text], input[type=tel], input[type=email], input[type=button] {
+    -webkit-appearance: none;
+    //box-shadow: none;
+    @include box-shadow(none);
+}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-text-fill-color: #000;
+    @include box-shadow(0 0 0 60px #fff inset);
+}
+
+
+.#{$baseName}-center {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.#{$baseName}-mobile, .#{$baseName}-pad {
+    display: none;
+}
+
+
+@include min-screen($mdScreen) {
+    .#{$baseName}-center {
+        width: 73%;
+    }
+}
+
+@include screen($normalScreen, $mdScreen) {
+    .#{$baseName}-center {
+        width: 78%;
+        min-width: 1000px;
+    }
+}
+@include max-screen($normalScreen) {
+    .#{$baseName}-center {
+        width: auto;
+        min-width: 100%;
+    }
+}
+// 1. small screen (pad)
+
+@include max-screen($padScreen) {
+    .#{$baseName}-pc {
+        display: none;
+    }
+    .#{$baseName}-pad {
+        display: block;
+    }
+}
+
+// 2. mobile screen (normal)
+
+@include max-screen($mobileScreen) {
+    .#{$baseName}-pc {
+        display: none;
+    }
+    .#{$baseName}-mobile {
+        display: block;
+    }
+}

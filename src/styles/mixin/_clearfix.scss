@@ -1,0 +1,10 @@
+.#{$baseName}-clear {
+    @include clearfix(true);
+}
+
+.#{$baseName}-fl {
+    @extend  %float;
+}
+.#{$baseName}-fr {
+    @include  float(right);
+}

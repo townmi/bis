@@ -1,0 +1,78 @@
+$baseInputBorderColor:              #1155CC;
+
+// input
+
+.#{$baseName}-input {
+    width: 100%;
+    height: $baseInputHeight;
+    padding: 6px 12px;
+    border: 1px solid #cccccc;
+    color: #555555;
+    font-size: 14px;
+    @include border-radius($smallRadius);
+}
+
+
+
+
+//select
+
+
+.#{$baseName}-select-box {
+    @extend %inline-block;
+    width: 312px;
+    a {
+        display: block;
+    }
+
+
+    .#{$baseName}-active {
+        background-color: $baseInputBorderColor;
+        color: #ffffff;
+    }
+}
+
+.#{$baseName}-select-head {
+    width: 100%;
+    position: relative;
+    display: block;
+    padding: 0 12px;
+    line-height: 28px;
+    border: 1px solid $baseInputBorderColor;
+    color: $baseInputBorderColor;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 14px;
+    span {
+        height: 100%;
+        position: absolute;
+        right: 15px;
+        text-align: right;
+    }
+}
+
+.#{$baseName}-select-head:focus {
+    background-color: $baseInputBorderColor;
+    color: #ffffff;
+}
+.#{$baseName}-select-body {
+    width: 100%;
+    border: 1px solid $baseInputBorderColor;
+    display: -none;
+    li {
+        line-height: 28px;
+        border-bottom: 1px solid $baseInputBorderColor;
+        cursor: pointer;
+        color: $baseInputBorderColor;
+    }
+    li>a {
+        padding: 0 12px;
+    }
+    li:focus {
+        color: #ffffff;
+        background-color: $baseInputBorderColor;
+    }
+    li:last-child {
+        border: none;
+    }
+}
