@@ -13,10 +13,9 @@ class Nav extends Component {
 
     render () {
         const { location } = this.props;
-        console.log(location);
 
         return (
-            <div className="bis-nav" data-id="{location}">
+            <div className="bis-nav">
                 <div className="bis-center">
                     <IndexLink to='/' className="bis-nav-logo">
                 <span className="fa fa-paper-plane">
