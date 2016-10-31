@@ -18,12 +18,10 @@ class Nav extends Component {
             <div className="bis-nav">
                 <div className="bis-center">
                     <IndexLink to='/' className="bis-nav-logo">
-                <span className="fa fa-paper-plane">
-
-                </span>
+                        <img src={"http://source.vipabc.com/Ext/images/website/share/logo/logo.png"} alt=""/>
                     </IndexLink>
                     <div className="bis-nav-links">
-                        <Link to='/article' className="_link" activeClassName='active'>
+                        <Link to='/counter' className="_link" activeClassName='active'>
                             Counter
                         </Link>
                         <Link to='/live' className="_link" activeClassName='active'>
