@@ -9,9 +9,9 @@ export const CoreLayout = ({ children }) => {
     const location = children.props.location;
 
     return (
-        <div className='bis-wrap'>
+        <div className='t-wrap'>
             <Nav location = { location }/>
-            <div className='core-layout__viewport'>
+            <div className='t-body'>
                 {children}
             </div>
         </div>

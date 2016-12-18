@@ -1,3 +1,5 @@
-.core-layout__viewport {
+@import "../../styles/mixin";
 
+.#{$baseName}-body {
+  padding-top: 44px;
 }

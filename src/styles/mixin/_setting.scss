@@ -12,7 +12,7 @@ $printStyleSwitch:      false !default; //是否开启打印样式
 
 // 名称
 //-----------------------------------------------------
-$baseName:              bis;
+$baseName:              t;
 $imgPath:               "../images/";
 
 
@@ -20,7 +20,7 @@ $imgPath:               "../images/";
 //-----------------------------------------------------	
 $baseFontSize:          14px !default;
 $baseLineHeight:        1.5 !default;
-$baseFontFamily:        "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", sans-serif;
+$baseFontFamily:        Courier, "Helvetica Neue", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Hiragino Kaku Gothic Pro", Meiryo, "Malgun Gothic", sans-serif;
 $fontCn:                "SimSun"; //宋体
 $fontYaHei:             "Microsoft Yahei"; //微软雅黑
 $fontHeiTi:             "SimHei"; //黑体
