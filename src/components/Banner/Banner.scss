@@ -1,0 +1,15 @@
+/*
+ * @author harrytang@vipabc.com 
+ * @date 16/11/4.
+ */
+
+@import "../../styles/mixin";
+
+.#{$baseName}-banner-cell {
+    a {
+        display: block;
+    }
+    img {
+        width: 100%;
+    }
+}

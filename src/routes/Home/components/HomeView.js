@@ -9,13 +9,15 @@ const reset = [
         id: "1",
         title: "测试一",
         date: "2016-12-31 11:11:11",
-        info: "这是一段间断的测试文字"
+        info: "这是一段间断的测试文字",
+        type: "normal"
     },
     {
         id: "2",
         title: "测试二",
         date: "2016-12-31 11:11:12",
-        info: "二阿呆啊喂啊大师大师dasd"
+        info: "二阿呆啊喂啊大师大师dasd",
+        class: "normal"
     }
 ];
 

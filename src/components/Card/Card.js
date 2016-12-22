@@ -1,8 +1,8 @@
 /**
  * Created by townmi on 16/12/18.
  */
-import React, { Component } from 'react';
-import {  Link } from 'react-router';
+import React, {Component} from 'react';
+import {Link} from 'react-router';
 import './Card.scss';
 
 const reset = function () {
@@ -12,14 +12,15 @@ const reset = function () {
 };
 
 class Card extends Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
     }
-    render () {
-        const { data } = this.props;
+
+    render() {
+        const {data} = this.props;
 
         return (
-            <div className="t-card" data-id={data.id}>
+            <div className={data.class + ' t-card'} data-id={data.id}>
                 <h2>{data.title}</h2>
                 <p>{data.info}</p>
                 <span>{data.date}</span>
