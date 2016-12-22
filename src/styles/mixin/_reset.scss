@@ -1,126 +1,109 @@
 @charset "utf-8";
 /*Reset*/
-*{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
-body{
-    font-family: $baseFontFamily;
-    font-size: 14px;
-    -webkit-font-smoothing: subpixel-antialiased;
+
+body {
+  font-family: $baseFontFamily;
+  font-size: 14px;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
+
 em {
-    font-style: normal;
+  font-style: normal;
 }
 
-a,img{
-    border: none;
-    text-decoration: none;
-}
-:focus{
-    outline: 0;
-}
-label{
-    cursor: pointer;
-}
-img{
-    vertical-align: middle;
-}
-table{
-    empty-cells: show;
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-h1,h2,h3,h4,h5,h6,strong {
-    font-weight: normal;
-}
-h1{
-    font-size: 1.6em;
-}
-h2,h3,h4{
-    font-size: 1.4em;
-}
-h5,h6{
-    font-size: 1.2em;
-}
-input{
-    border: none;
-}
-textarea{
-    overflow: scroll;
+a, img {
+  border: none;
+  text-decoration: none;
 }
 
-a, input,textarea, .hover-delay, button{
-    font-family:$baseFontFamily;
+:focus {
+  outline: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+img {
+  vertical-align: middle;
+}
+
+table {
+  empty-cells: show;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2, h3, h4 {
+  font-size: 1.4em;
+}
+
+h5, h6 {
+  font-size: 1.2em;
+}
+
+input {
+  border: none;
+}
+
+textarea {
+  overflow: scroll;
+}
+
+a, input, textarea, .hover-delay, button {
+  font-family: $baseFontFamily;
 }
 
 ::-ms-clear {
-    display: none;
+  display: none;
 }
+
 ::-ms-reveal {
-    display: none;
+  display: none;
 }
-
-
 
 input[type=text], input[type=tel], input[type=email], input[type=button] {
-    -webkit-appearance: none;
-    //box-shadow: none;
-    @include box-shadow(none);
-}
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
-    -webkit-text-fill-color: #000;
-    @include box-shadow(0 0 0 60px #fff inset);
+  -webkit-appearance: none;
+  //box-shadow: none;
+  @include box-shadow(none);
 }
 
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  -webkit-text-fill-color: #000;
+  @include box-shadow(0 0 0 60px #fff inset);
+}
 
 .#{$baseName}-center {
-    width: 1000px;
-    margin: 0 auto;
+  width: 1000px;
+  margin: 0 auto;
 }
 
 .#{$baseName}-mobile, .#{$baseName}-pad {
-    display: none;
+  display: none;
 }
-
 
 @include min-screen($mdScreen) {
-    .#{$baseName}-center {
-        width: 1200px;
-    }
+  .#{$baseName}-center {
+    width: 1280px;
+  }
 }
 
-@include screen($normalScreen, $mdScreen) {
-    .#{$baseName}-center {
-        width: 78%;
-        min-width: 1000px;
-    }
-}
 @include max-screen($normalScreen) {
-    .#{$baseName}-center {
-        width: auto;
-        min-width: 100%;
-    }
-}
-// 1. small screen (pad)
-
-@include max-screen($padScreen) {
-    .#{$baseName}-pc {
-        display: none;
-    }
-    .#{$baseName}-pad {
-        display: block;
-    }
+  .#{$baseName}-center {
+    width: auto;
+  }
 }
 
-// 2. mobile screen (normal)
-
-@include max-screen($mobileScreen) {
-    .#{$baseName}-pc {
-        display: none;
-    }
-    .#{$baseName}-mobile {
-        display: block;
-    }
-}

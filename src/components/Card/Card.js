@@ -20,7 +20,7 @@ class Card extends Component {
         const {data} = this.props;
 
         return (
-            <div className={data.class + ' t-card'} data-id={data.id}>
+            <div className={data.type + ' t-card'} data-id={data.id}>
                 <h2>{data.title}</h2>
                 <p>{data.info}</p>
                 <span>{data.date}</span>

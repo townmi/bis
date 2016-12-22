@@ -12,13 +12,13 @@ class Nav extends Component {
     }
 
     render () {
+
         const { location } = this.props;
 
         return (
             <div className="t-nav">
                 <div className="t-center">
                     <IndexLink to='/' className="t-nav-logo">
-                        {/*<img src={"//img.alicdn.com/tps/TB16hl5LpXXXXXRXVXXXXXXXXXX-198-46.png"} alt=""/>*/}
                         Towne/Townmi
                     </IndexLink>
                     <div className="t-nav-links">
