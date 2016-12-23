@@ -17,10 +17,10 @@ class Card extends Component {
     }
 
     render() {
-        const {data} = this.props;
+        const {data, index} = this.props;
 
         return (
-            <div className={data.type + ' t-card'} data-id={data.id}>
+            <div className={data.type + ' t-card ' + index} data-id={data.id}>
                 <h2>{data.title}</h2>
                 <p>{data.info}</p>
                 <span>{data.date}</span>

@@ -57,8 +57,21 @@ class Banner extends Component {
     draw () {
 
         let list = [];
-        this.state.list.forEach(function (ele) {
-            list.push(<Card data={ele}/>);
+        const last = this.state.list.length-1;
+        this.state.list.forEach(function (ele, index) {
+            let pos = "middle";
+            switch (index) {
+                case 0:
+                    pos = "left";
+                    break;
+                case last:
+                    pos = "right";
+                    break;
+                default:
+                    pos = "middle";
+                    break;
+            }
+            list.push(<Card data={ele} index={pos}/>);
         });
 
         return list;
@@ -69,12 +82,12 @@ class Banner extends Component {
 
         return (
             <div className="t-index-banner">
-                <dic className="t-center">
-                    <h2>最新</h2>
-                    <div>
+                <div className="t-center">
+                    <h2>最新消息</h2>
+                    <div className="_cell">
                         {this.draw()}
                     </div>
-                </dic>
+                </div>
             </div>
         )
     }

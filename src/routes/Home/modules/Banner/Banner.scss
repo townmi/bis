@@ -5,11 +5,17 @@
 
 @import "../../../../styles/mixin";
 
-.#{$baseName}-banner-cell {
-    a {
-        display: block;
+.#{$baseName}-index-banner {
+    .#{$baseName}-center {
+        position: relative;
     }
-    img {
-        width: 100%;
+    ._cell {
+        width: calc(100% + 24px);
+        position: absolute;
+        left: -24px;
+    }
+    .#{$baseName}-card {
+        margin-left: 24px;
+        width: calc(25% - 24px);
     }
 }
