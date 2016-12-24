@@ -1,25 +1,36 @@
-import React from 'react';
-//import Header from '../../components/Header';
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
+
 import Nav from '../../components/Nav';
+import Footer from '../../components/Footer';
+
 import './CoreLayout.scss';
 import '../../styles/core.scss';
 
-export const CoreLayout = ({ children }) => {
+class CoreLayout extends Component {
 
-    const location = children.props.location;
+    constructor (props) {
+        super(props);
+    }
 
-    return (
-        <div className='t-wrap'>
-            <Nav location = { location }/>
-            <div className='t-body'>
-                {children}
+    render() {
+
+        const { location, children } = this.props;
+
+        return (
+            <div className='t-wrap'>
+                <Nav location={ location }/>
+                <div className={'t-body ' + location.pathname}>
+                    {children}
+                    <Footer location={ location }/>
+                </div>
             </div>
-        </div>
-    )
-};
+        )
+    }
+}
 
 CoreLayout.propTypes = {
     children: React.PropTypes.element.isRequired
 };
 
-export default CoreLayout
+export default connect()(CoreLayout)

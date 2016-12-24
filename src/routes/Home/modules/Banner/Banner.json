@@ -1,0 +1,42 @@
+{
+  "status": "200",
+  "statusStr": "success",
+  "dataInfo": "最新消息",
+  "data": [{
+    "id": 1,
+    "title": "12313",
+    "info": "asdhaskdadsasd",
+    "date": "2016-12-22",
+    "type": "normal"
+  },{
+    "id": 2,
+    "title": "12313",
+    "info": "asdhaskdadsasd",
+    "date": "2016-12-22",
+    "type": "normal"
+  },{
+    "id": 3,
+    "title": "12313",
+    "info": "asdhaskdadsasd",
+    "date": "2016-12-22",
+    "type": "normal"
+  },{
+    "id": 4,
+    "title": "12313",
+    "info": "asdhaskdadsasd",
+    "date": "2016-12-22",
+    "type": "normal"
+  },{
+    "id": 5,
+    "title": "12313",
+    "info": "asdhaskdadsasd",
+    "date": "2016-12-22",
+    "type": "normal"
+  },{
+    "id": 6,
+    "title": "12313",
+    "info": "asdhaskdadsasd",
+    "date": "2016-12-22",
+    "type": "normal"
+  }]
+}

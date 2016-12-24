@@ -1,21 +1,60 @@
 /*
- * @author harrytang@vipabc.com 
+ * @author harrytang@vipabc.com
  * @date 16/11/4.
  */
-
 @import "../../../../styles/mixin";
 
+
 .#{$baseName}-index-banner {
-    .#{$baseName}-center {
-        position: relative;
+  .title {
+    margin-bottom: 20px;
+  }
+  .#{$baseName}-center {
+    position: relative;
+    @include clearfix(true);
+  }
+  ._left {
+    float: left;
+    width: 22%;
+    margin: 0 2% 0 0;
+  }
+  ._middle {
+    float: left;
+    width: 22%;
+    margin: 0 2%;
+  }
+  ._right {
+    float: right;
+    width: 22%;
+    margin: 0 0 0 2%;
+  }
+  .#{$baseName}-card {
+    margin-bottom: 40px;
+    background-color: $white;
+    @include border-radius($smallRadius);
+    @include transform(translateY(100px));
+    @include transition(all 0.4s ease);
+    @include opacity(0);
+  }
+  @for $var from 0 to 100 {
+    ._a-#{$var} {
+      @include transition-delay($var*0.05s);
     }
-    ._cell {
-        width: calc(100% + 24px);
-        position: absolute;
-        left: -24px;
-    }
+  }
+
+  &.complete {
     .#{$baseName}-card {
-        margin-left: 24px;
-        width: calc(25% - 24px);
+      @include transform(translateY(0));
+      @include opacity(100);
     }
+  }
+}
+
+
+@include min-screen($mdScreen) {
+  .#{$baseName}-index-banner {
+    .#{$baseName}-card {
+      margin-bottom: 50px;
+    }
+  }
 }

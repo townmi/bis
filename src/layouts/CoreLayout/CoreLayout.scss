@@ -2,4 +2,6 @@
 
 .#{$baseName}-body {
   padding-top: 44px;
+  min-height: calc(100vh - 44px);
+  overflow: auto;
 }

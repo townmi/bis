@@ -7,6 +7,7 @@
 }
 
 body {
+  min-width: 1000px;
   font-family: $baseFontFamily;
   font-size: 14px;
   -webkit-font-smoothing: subpixel-antialiased;
@@ -100,10 +101,3 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
     width: 1280px;
   }
 }
-
-@include max-screen($normalScreen) {
-  .#{$baseName}-center {
-    width: auto;
-  }
-}
-

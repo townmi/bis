@@ -20,8 +20,15 @@ class Card extends Component {
         const {data, index} = this.props;
 
         return (
-            <div className={data.type + ' t-card ' + index} data-id={data.id}>
-                <h2>{data.title}</h2>
+            <div className={' t-card '+ data.type + ' _a-' + index}>
+                <h2 className="_title">
+                    <Link to={'/blog/'+data.id}>
+                        {data.title}
+                    </Link>
+                </h2>
+                <div className="_img-holder">
+                    <img src={data.imgUrl} alt=""/>
+                </div>
                 <p>{data.info}</p>
                 <span>{data.date}</span>
             </div>

@@ -4,8 +4,9 @@ import Home from './Home'
 import CounterRoute from './Counter'
 import ZenRoute from './Zen'
 import ElapseRoute from './Elapse'
-import RouteRoute from './Route'
+import BlogRoute from './Blog'
 import PageNotFound from './PageNotFound'
+import Todo from './Todo'
 import Redirect from './PageNotFound/redirect'
 
 /*  Note: Instead of using JSX, we recommend using react-router
@@ -19,8 +20,9 @@ export const createRoutes = (store) => ({
         CounterRoute(store),
         ZenRoute(store),
         ElapseRoute(store),
-        RouteRoute(store),
+        BlogRoute(store),
         PageNotFound(),
+        Todo(store),
         Redirect
     ]
 });

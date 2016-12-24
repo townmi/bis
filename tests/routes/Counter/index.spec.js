@@ -1,6 +1,6 @@
 import CounterRoute from 'routes/Counter'
 
-describe('(Route) Counter', () => {
+describe('(Blog) Counter', () => {
   let _route
 
   beforeEach(() => {

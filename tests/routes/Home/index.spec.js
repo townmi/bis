@@ -1,6 +1,6 @@
 import HomeRoute from 'routes/Home'
 
-describe('(Route) Home', () => {
+describe('(Blog) Home', () => {
   let _component
 
   beforeEach(() => {
