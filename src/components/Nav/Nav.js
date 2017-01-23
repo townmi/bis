@@ -22,9 +22,9 @@ class Nav extends Component {
                         Towne/Townmi
                     </IndexLink>
                     <div className="t-nav-links">
-                        {/*<Link to='/counter' className="_link" activeClassName='active'>*/}
-                            {/*blog*/}
-                        {/*</Link>*/}
+                        <Link to='/stock' className="_link" activeClassName='active'>
+                            股票
+                        </Link>
                         {/*<Link to='/live' className="_link" activeClassName='active'>*/}
                             {/*data*/}
                         {/*</Link>*/}

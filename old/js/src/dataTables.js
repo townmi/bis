@@ -13137,7 +13137,7 @@ define(function(require, exports, module){
 			"aLengthMenu": null,
 		
 			/**
-			 * Counter for the draws that the table does. Also used as a tracker for
+			 * Stock for the draws that the table does. Also used as a tracker for
 			 * server-side processing
 			 *  @type int
 			 *  @default 0

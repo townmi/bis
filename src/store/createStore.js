@@ -37,17 +37,17 @@ export default (initialState = {}) => {
 
     window.__store__ = store;
 
-    // store.asyncReducers = {};
+    store.asyncReducers = {};
 
     // To unsubscribe, invoke `store.unsubscribeHistory()` anytime
-    // store.unsubscribeHistory = browserHistory.listen(updateLocation(store));
+    store.unsubscribeHistory = browserHistory.listen(updateLocation(store));
 
-    // if (module.hot) {
-    //     module.hot.accept('./reducers', () => {
-    //         const reducers = require('./reducers').default;
-    //         store.replaceReducer(reducers(store.asyncReducers))
-    //     })
-    // }
+    if (module.hot) {
+        module.hot.accept('./reducers', () => {
+            const reducers = require('./reducers').default;
+            store.replaceReducer(reducers(store.asyncReducers))
+        })
+    }
 
     return store
 }

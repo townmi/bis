@@ -7,6 +7,7 @@ import ElapseRoute from './Elapse'
 import BlogRoute from './Blog'
 import PageNotFound from './PageNotFound'
 import Todo from './Todo'
+import Stock from './Stock'
 import Redirect from './PageNotFound/redirect'
 
 /*  Note: Instead of using JSX, we recommend using react-router
@@ -23,6 +24,7 @@ export const createRoutes = (store) => ({
         BlogRoute(store),
         PageNotFound(),
         Todo(store),
+        Stock(),
         Redirect
     ]
 });
