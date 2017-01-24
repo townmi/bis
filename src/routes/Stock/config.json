@@ -1,0 +1,10 @@
+{
+    "name": "stock",
+    "script": {
+        "highstock": "//cdn.bootcss.com/highstock/5.0.7/highstock.js"
+    },
+    "api": {
+        "sztmp": "http://127.0.0.1:9090/stock"
+    },
+    "version": "0.0.1"
+}

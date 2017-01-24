@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './stock.scss';
-
+import config from '../config.json';
 let data = [];
 
 class Stock extends Component {
@@ -13,14 +13,14 @@ class Stock extends Component {
 
         let self = this;
 
-        let promise = $.getScript("//cdn.bootcss.com/highstock/5.0.7/highstock.js");
+        let promise = $.getScript(config.script.highstock);
 
         promise = promise.then(function () {
-            return $.get("http://127.0.0.1:9090/stock")
+            return $.get(config.api.sztmp)
         });
         promise.then(function (res) {
-            $.parseJSON(res).forEach(function (cell, index) {
-                data.push([new Date(cell.Date).getTime(), cell.CloseAtCash])
+            $.parseJSON(res).forEach(function (cell) {
+                data.push([cell.Date*1000, cell.CloseAtCash])
             });
             self.setState((prevState) => {
                 prevState.status = "complete";
@@ -28,9 +28,10 @@ class Stock extends Component {
         });
 
     }
+
     componentDidUpdate() {
-        console.log(1);
-        if($ && $.fn.highcharts) {
+
+        if ($ && $.fn.highcharts) {
             $('#stockContainer').highcharts('StockChart', {
                 rangeSelector: {
                     selected: 1
@@ -50,14 +51,13 @@ class Stock extends Component {
             });
         }
 
-
     }
 
     draw() {
         if (this.state.status == "loading") {
             return <div>loading</div>;
         } else {
-            return <div id="stockContainer"></div>;
+            return <div id="stockContainer" className="t-chart"></div>;
         }
 
     }
@@ -74,7 +74,6 @@ class Stock extends Component {
     }
 }
 
-Stock.propTypes = {
-};
+Stock.propTypes = {};
 
 export default Stock
